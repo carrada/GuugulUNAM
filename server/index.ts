@@ -1,7 +1,7 @@
 import "dotenv/config"
 import path from "node:path"
 import express, { type Request, type Response } from "express"
-import { handleJoin } from "./handle-join.ts"
+import { handleJoin } from "./handle-join.js"
 
 const app = express()
 const port = Number(process.env.PORT ?? 8787)

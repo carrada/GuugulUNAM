@@ -1,4 +1,4 @@
-import { handleJoin } from "../server/handle-join.ts"
+import { handleJoin } from "../server/handle-join.js"
 
 type VercelRequest = {
   method?: string

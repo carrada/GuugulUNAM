@@ -1,7 +1,7 @@
-import { sendInviteEmail } from "./email.ts"
-import { upsertMember } from "./members.ts"
-import { validateJoin, type JoinPayload } from "./validate.ts"
-import { sendWhatsAppInvite } from "./whatsapp.ts"
+import { sendInviteEmail } from "./email.js"
+import { upsertMember } from "./members.js"
+import { validateJoin, type JoinPayload } from "./validate.js"
+import { sendWhatsAppInvite } from "./whatsapp.js"
 
 const hits = new Map<string, { count: number; resetAt: number }>()
 
