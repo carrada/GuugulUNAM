@@ -34,19 +34,9 @@ export async function handleJoin(body: unknown, ip = "unknown"): Promise<JoinRes
     return { status: 400, json: { error: parsed.error } }
   }
 
-  const isProd = process.env.NODE_ENV === "production" || Boolean(process.env.VERCEL)
   const inviteUrl =
     process.env.WHATSAPP_INVITE_URL?.trim() ||
-    (!isProd ? "https://chat.whatsapp.com/" : "")
-  if (!inviteUrl) {
-    return {
-      status: 500,
-      json: {
-        error:
-          "Falta el enlace de la comunidad de WhatsApp. Configura WHATSAPP_INVITE_URL.",
-      },
-    }
-  }
+    "https://chat.whatsapp.com/JCmxTdOuSqJAhrSGOt6pG5"
 
   const { name, email, phone, university, plantel, career, semester } = parsed.data
 

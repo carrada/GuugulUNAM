@@ -8,6 +8,8 @@ import { SuggestInput, fieldClass } from "@/components/join/SuggestInput"
 import { PLANTELES, UNIVERSITIES } from "@/data/schools"
 import { cn } from "@/lib/utils"
 
+const WHATSAPP_INVITE_URL = "https://chat.whatsapp.com/JCmxTdOuSqJAhrSGOt6pG5"
+
 const SEMESTERS = [
   "1",
   "2",
@@ -56,6 +58,7 @@ export function JoinForm() {
     }
 
     setSubmitting(true)
+    const inviteTab = window.open("about:blank", "_blank")
     try {
       const response = await fetch("/api/join", {
         method: "POST",
@@ -73,11 +76,22 @@ export function JoinForm() {
       })
       const data = (await response.json()) as JoinResponse
       if (!response.ok || !data.ok) {
+        inviteTab?.close()
         setError(data.error ?? "No pudimos completar el registro.")
         return
       }
-      setInviteUrl(data.inviteUrl ?? null)
+      const url =
+        data.inviteUrl && data.inviteUrl !== "https://chat.whatsapp.com/"
+          ? data.inviteUrl
+          : WHATSAPP_INVITE_URL
+      setInviteUrl(url)
+      if (inviteTab) {
+        inviteTab.location.href = url
+      } else {
+        window.location.assign(url)
+      }
     } catch {
+      inviteTab?.close()
       setError(
         "No pudimos conectar con el servidor. Si estás en local, corre npm run dev para levantar la API.",
       )
@@ -93,27 +107,20 @@ export function JoinForm() {
           Listo
         </p>
         <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-slate-900">
-          Revisa tu correo
+          Ya casi estás dentro
         </h2>
         <p className="mx-auto mt-4 max-w-md font-sans text-slate-600">
-          Te enviamos la invitación a Anuncios en WhatsApp. También puedes
-          entrar ahora mismo con el botón de abajo.
+          Te abrimos el grupo de WhatsApp. Si no se abrió, entra con el botón.
+          También te llega el mismo enlace por correo.
         </p>
-        {inviteUrl && inviteUrl !== "https://chat.whatsapp.com/" ? (
-          <a
-            href={inviteUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-8 inline-flex h-11 items-center justify-center rounded-full bg-google-blue px-6 text-sm font-medium text-white transition-opacity hover:opacity-90"
-          >
-            Unirme a WhatsApp
-          </a>
-        ) : (
-          <p className="mt-6 font-sans text-sm text-slate-500">
-            El enlace de WhatsApp se activa cuando la comunidad configure
-            WHATSAPP_INVITE_URL.
-          </p>
-        )}
+        <a
+          href={inviteUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-8 inline-flex h-11 items-center justify-center rounded-full bg-google-blue px-6 text-sm font-medium text-white transition-opacity hover:opacity-90"
+        >
+          Unirme a WhatsApp
+        </a>
       </div>
     )
   }
