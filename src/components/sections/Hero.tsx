@@ -29,7 +29,7 @@ export function Hero() {
   const isMobile = useIsMobile()
 
   return (
-    <section className="relative flex h-[100vh] flex-col items-center justify-center overflow-hidden bg-white text-slate-950">
+    <section className="relative flex h-svh flex-col items-center justify-center overflow-hidden bg-white text-slate-950">
       <div className="absolute inset-0 h-full w-full">
         <Ballpit
           className="h-full w-full"

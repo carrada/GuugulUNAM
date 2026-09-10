@@ -15,7 +15,9 @@ export type Member = {
   whatsappSent: boolean
 }
 
-const dataDir = path.resolve(process.cwd(), "data")
+const dataDir = process.env.VERCEL
+  ? path.join("/tmp", "guugul-data")
+  : path.resolve(process.cwd(), "data")
 const membersFile = path.join(dataDir, "members.json")
 
 let writeQueue: Promise<void> = Promise.resolve()
