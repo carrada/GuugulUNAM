@@ -10,7 +10,7 @@ const LINKS = [
 
 export function Navbar() {
   return (
-    <header className="fixed inset-x-0 top-1 z-50 px-4">
+    <header className="fixed inset-x-0 top-6 z-50 px-4">
       <nav
         className={cn(
           "mx-auto flex max-w-5xl items-center justify-between rounded-full border border-black/8",

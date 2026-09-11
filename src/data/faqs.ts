@@ -72,7 +72,7 @@ export const FAQS = [
   {
     question: "Estoy en prepa, CCH o recién egresade. ¿Aplica?",
     answer:
-      "Sí. En semestre puedes marcar CCH/ENP, egresade u otro. La comunidad es estudiantil en sentido amplio: si te sirve el contenido técnico, cabes. Los eventos con filtro de edad o de matrícula universitaria se anuncian aparte.",
+      "Sí. En semestre puedes marcar CCH/ENP, Egresadx u otro. La comunidad es estudiantil en sentido amplio: si te sirve el contenido técnico, cabes. Los eventos con filtro de edad o de matrícula universitaria se anuncian aparte.",
   },
   {
     question: "¿Dónde reporto un abuso o un aviso falso?",

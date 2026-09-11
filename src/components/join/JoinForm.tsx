@@ -27,7 +27,7 @@ const SEMESTERS = [
   "11+",
   "CCH / ENP / prepa",
   "Posgrado",
-  "Egresade",
+  "Egresadx",
   "Docente",
   "Otro",
 ]
