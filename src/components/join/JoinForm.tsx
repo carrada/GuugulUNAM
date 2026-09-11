@@ -1,4 +1,6 @@
 import { useState, type FormEvent } from "react"
+import { isSubmissionError, type SubmissionError } from "@formspree/core"
+import { useSubmit, ValidationError } from "@formspree/react"
 import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
@@ -8,6 +10,7 @@ import { SuggestInput, fieldClass } from "@/components/join/SuggestInput"
 import { PLANTELES, UNIVERSITIES } from "@/data/schools"
 import { cn } from "@/lib/utils"
 
+const FORMSPREE_FORM_ID = "xvkoyvvq"
 const WHATSAPP_INVITE_URL = "https://chat.whatsapp.com/JCmxTdOuSqJAhrSGOt6pG5"
 
 const SEMESTERS = [
@@ -29,13 +32,23 @@ const SEMESTERS = [
   "Otro",
 ]
 
-type JoinResponse = {
-  ok?: boolean
-  error?: string
-  inviteUrl?: string
+type JoinFields = {
+  name: string
+  email: string
+  phone: string
+  university: string
+  plantel: string
+  career: string
+  semester: string
+  consent: string
 }
 
 export function JoinForm() {
+  const submitToFormspree = useSubmit<JoinFields>(FORMSPREE_FORM_ID, {
+    extraData: {
+      _subject: "Nuevo registro · GuugulUNAM",
+    },
+  })
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
@@ -46,55 +59,52 @@ export function JoinForm() {
   const [consent, setConsent] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [fieldErrors, setFieldErrors] = useState<SubmissionError<JoinFields> | null>(
+    null,
+  )
   const [inviteUrl, setInviteUrl] = useState<string | null>(null)
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     setError(null)
+    setFieldErrors(null)
 
     if (!consent) {
-      setError("Marca la casilla para recibir la invitación por correo y WhatsApp.")
+      setError("Marca la casilla para recibir la invitación por WhatsApp.")
       return
     }
 
     setSubmitting(true)
     const inviteTab = window.open("about:blank", "_blank")
     try {
-      const response = await fetch("/api/join", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name,
-          email,
-          phone,
-          university,
-          plantel,
-          career,
-          semester,
-          consent,
-        }),
+      const result = await submitToFormspree({
+        name,
+        email,
+        phone,
+        university,
+        plantel,
+        career,
+        semester,
+        consent: "accepted",
       })
-      const data = (await response.json()) as JoinResponse
-      if (!response.ok || !data.ok) {
+
+      if (isSubmissionError(result)) {
         inviteTab?.close()
-        setError(data.error ?? "No pudimos completar el registro.")
+        setFieldErrors(result)
+        const formMessage = result.getFormErrors()[0]?.message
+        setError(formMessage ?? "No pudimos completar el registro.")
         return
       }
-      const url =
-        data.inviteUrl && data.inviteUrl !== "https://chat.whatsapp.com/"
-          ? data.inviteUrl
-          : WHATSAPP_INVITE_URL
-      setInviteUrl(url)
+
+      setInviteUrl(WHATSAPP_INVITE_URL)
       if (inviteTab) {
-        inviteTab.location.href = url
+        inviteTab.location.href = WHATSAPP_INVITE_URL
       } else {
-        window.location.assign(url)
+        window.location.assign(WHATSAPP_INVITE_URL)
       }
     } catch {
       inviteTab?.close()
-      setError(
-        "No pudimos conectar con el servidor. Si estás en local, corre npm run dev para levantar la API.",
-      )
+      setError("No pudimos conectar con Formspree. Inténtalo de nuevo.")
     } finally {
       setSubmitting(false)
     }
@@ -111,7 +121,6 @@ export function JoinForm() {
         </h2>
         <p className="mx-auto mt-4 max-w-md font-sans text-slate-600">
           Te abrimos el grupo de WhatsApp. Si no se abrió, entra con el botón.
-          También te llega el mismo enlace por correo.
         </p>
         <a
           href={inviteUrl}
@@ -143,6 +152,11 @@ export function JoinForm() {
             placeholder="Tu nombre"
             className={fieldClass}
           />
+          <ValidationError
+            field="name"
+            errors={fieldErrors}
+            className="font-sans text-sm text-google-red"
+          />
         </div>
         <div className="space-y-2">
           <Label htmlFor="email">Correo</Label>
@@ -156,6 +170,11 @@ export function JoinForm() {
             onChange={(event) => setEmail(event.target.value)}
             placeholder="tu@correo.com"
             className={fieldClass}
+          />
+          <ValidationError
+            field="email"
+            errors={fieldErrors}
+            className="font-sans text-sm text-google-red"
           />
         </div>
         <div className="space-y-2">
@@ -175,6 +194,11 @@ export function JoinForm() {
           <p className="font-sans text-xs text-slate-500">
             10 dígitos de México. Ahí te llega la invitación a Anuncios.
           </p>
+          <ValidationError
+            field="phone"
+            errors={fieldErrors}
+            className="font-sans text-sm text-google-red"
+          />
         </div>
         <div className="space-y-2 sm:col-span-2">
           <Label htmlFor="university">Universidad</Label>
@@ -191,6 +215,11 @@ export function JoinForm() {
             Hay una lista larga de universidades de México. Si no está la tuya,
             escríbela.
           </p>
+          <ValidationError
+            field="university"
+            errors={fieldErrors}
+            className="font-sans text-sm text-google-red"
+          />
         </div>
         <div className="space-y-2">
           <Label htmlFor="plantel">Plantel</Label>
@@ -202,6 +231,11 @@ export function JoinForm() {
             placeholder="CU, FES, campus, TecNM…"
             options={PLANTELES}
             required
+          />
+          <ValidationError
+            field="plantel"
+            errors={fieldErrors}
+            className="font-sans text-sm text-google-red"
           />
         </div>
         <div className="space-y-2">
@@ -218,6 +252,11 @@ export function JoinForm() {
           <p className="font-sans text-xs text-slate-500">
             Escríbela como la cursas; no hay catálogo cerrado.
           </p>
+          <ValidationError
+            field="career"
+            errors={fieldErrors}
+            className="font-sans text-sm text-google-red"
+          />
         </div>
         <div className="space-y-2 sm:col-span-2">
           <Label htmlFor="semester">Semestre</Label>
@@ -246,7 +285,7 @@ export function JoinForm() {
           className="mt-0.5"
         />
         <span>
-          Acepto recibir la invitación por correo y WhatsApp, y los{" "}
+          Acepto recibir la invitación por WhatsApp, y los{" "}
           <Link to="/terminos-y-condiciones" className="text-google-blue hover:underline">
             términos
           </Link>{" "}

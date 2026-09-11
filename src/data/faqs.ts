@@ -37,7 +37,7 @@ export const FAQS = [
   {
     question: "¿Tiene costo unirse?",
     answer:
-      "No. Registrarte, entrar al WhatsApp de avisos y recibir el correo de bienvenida es gratuito. Si algún taller o evento externo pidiera cuota, se diría con claridad; no es la regla de la comunidad.",
+      "No. Registrarte y entrar al WhatsApp de avisos es gratuito. Si algún taller o evento externo pidiera cuota, se diría con claridad; no es la regla de la comunidad.",
   },
   {
     question: "¿Me van a conseguir chamba en Google?",
@@ -47,17 +47,17 @@ export const FAQS = [
   {
     question: "¿Qué datos piden en el formulario y para qué?",
     answer:
-      "Nombre, correo y WhatsApp para mandarte la invitación. Universidad, plantel, carrera y semestre nos ayudan a entender de dónde llega la comunidad (por ejemplo, cuánta gente hay fuera de Ciencias o de la UNAM). No usamos cookies de publicidad. El tratamiento concreto de cada campo está alineado con el aviso legal y los términos.",
+      "Nombre, correo y WhatsApp para mandarte la invitación al canal. Universidad, plantel, carrera y semestre nos ayudan a entender de dónde llega la comunidad (por ejemplo, cuánta gente hay fuera de Ciencias o de la UNAM). No usamos cookies de publicidad. El tratamiento concreto de cada campo está alineado con el aviso legal y los términos.",
   },
   {
     question: "¿Tengo que dar mi número de WhatsApp?",
     answer:
-      "Sí, porque la invitación al canal de avisos sale hacia ese número y también te llega el link por correo. Si el mensaje de WhatsApp no pasa (número mal escrito o sin cuenta), el correo sigue sirviendo para entrar con el enlace.",
+      "Sí, porque la invitación al canal de avisos va a ese número. Si la pestaña de WhatsApp no se abre sola, en la pantalla de éxito hay un botón para entrar con el enlace.",
   },
   {
     question: "Ya me registré y no me llegó nada.",
     answer:
-      "Revisa spam y promociones. Confirma que el correo y los 10 dígitos estén bien. Si en la pantalla de éxito aparece el botón de WhatsApp, úsalo directo. Si el problema sigue, escríbenos por los canales publicados en el sitio.",
+      "Si no se abrió WhatsApp, usa el botón de la pantalla de éxito. Confirma que el número tenga 10 dígitos y que el formulario se haya enviado (si hay error, aparece en rojo). Si el problema sigue, escríbenos por los canales publicados en el sitio.",
   },
   {
     question: "¿Puedo salirme después?",

@@ -24,11 +24,11 @@ export default function JoinPage() {
           Súmate a la comunidad
         </h1>
         <p className="mt-4 max-w-2xl font-sans text-base leading-relaxed text-slate-600 md:text-lg">
-          Al completar este registro recibirá un correo de bienvenida con el
-          enlace de invitación al canal de Anuncios en WhatsApp. En dicho
-          canal se comunican eventos en las oficinas de Google, novedades
-          relativas a nuevas herramientas de Google y convocatorias de acceso
-          anticipado para probar dichas herramientas.
+          Al completar este registro te abrimos el enlace de invitación al
+          canal de Anuncios en WhatsApp. En dicho canal se comunican eventos
+          en las oficinas de Google, novedades relativas a nuevas
+          herramientas de Google y convocatorias de acceso anticipado para
+          probar dichas herramientas.
         </p>
         <p className="mt-3 max-w-2xl font-sans text-base leading-relaxed text-slate-600 md:text-lg">
           La participación no está reservada a una facultad ni a una sola
