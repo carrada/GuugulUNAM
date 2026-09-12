@@ -11,8 +11,8 @@ export default function FaqPage() {
   }, [])
 
   return (
-    <div className="min-h-svh bg-white">
-      <div className="fixed inset-x-0 top-0 z-50">
+    <div className="relative min-h-svh bg-white">
+      <div className="absolute inset-x-0 top-0 z-40">
         <ColorBar />
       </div>
       <Navbar />
