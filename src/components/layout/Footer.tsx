@@ -19,6 +19,9 @@ export function Footer() {
         </div>
         <div className="flex flex-col gap-2 font-sans text-sm text-slate-600">
           <p className="font-medium text-slate-900">Comunidad</p>
+          <Link to="/eventos" className="hover:text-google-blue">
+            Eventos
+          </Link>
           <Link to="/aprender" className="hover:text-google-blue">
             Aprender
           </Link>

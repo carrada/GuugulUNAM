@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { ScrollManager } from "@/components/layout/ScrollManager"
 import HomePage from "@/pages/HomePage"
 import AvisoLegalPage from "@/pages/AvisoLegalPage"
+import EventosPage from "@/pages/EventosPage"
 import JoinPage from "@/pages/JoinPage"
 import FaqPage from "@/pages/FaqPage"
 import LearnPage from "@/pages/LearnPage"
@@ -18,6 +19,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/unete" element={<JoinPage />} />
+        <Route path="/eventos" element={<EventosPage />} />
         <Route path="/aprender" element={<LearnPage />} />
         <Route path="/aprender/prompts" element={<PromptsPage />} />
         <Route path="/aprender/roadmaps" element={<RoadmapsPage />} />
