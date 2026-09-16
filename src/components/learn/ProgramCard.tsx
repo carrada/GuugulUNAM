@@ -89,6 +89,55 @@ export function ProgramCard({ program }: { program: LearnProgram }) {
           </ul>
         </div>
       ) : null}
+      {program.steps ? (
+        <div className="mt-5 border-t border-black/6 pt-4">
+          <p className="font-sans text-sm font-medium text-slate-900">
+            {program.steps.heading ?? "Pasos para tu registro"}
+          </p>
+          {program.steps.intro ? (
+            <p className="mt-2 font-sans text-sm leading-relaxed text-slate-600">
+              {program.steps.intro}
+            </p>
+          ) : null}
+          <ol className="mt-3 space-y-3">
+            {program.steps.items.map((step, index) => (
+              <li key={step.title} className="flex gap-3">
+                <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-[#e8f0fe] font-sans text-xs font-medium text-[#1967d2]">
+                  {index + 1}
+                </span>
+                <div>
+                  <p className="font-sans text-sm font-medium text-slate-900">
+                    {step.title}
+                  </p>
+                  <p className="mt-1 font-sans text-sm leading-relaxed text-slate-600">
+                    {step.body}
+                  </p>
+                  {step.href ? (
+                    <a
+                      href={step.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-1 inline-block font-sans text-sm text-google-blue hover:underline"
+                    >
+                      {step.hrefLabel ?? step.href}
+                    </a>
+                  ) : null}
+                </div>
+              </li>
+            ))}
+          </ol>
+          {program.steps.warning ? (
+            <p className="mt-4 font-sans text-sm leading-relaxed text-google-red">
+              {program.steps.warning}
+            </p>
+          ) : null}
+          {program.steps.closing ? (
+            <p className="mt-3 font-sans text-sm leading-relaxed text-slate-600">
+              {program.steps.closing}
+            </p>
+          ) : null}
+        </div>
+      ) : null}
       <a
         href={program.href}
         target="_blank"

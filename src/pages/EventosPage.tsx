@@ -28,9 +28,6 @@ export default function EventosPage() {
         </h1>
         <p className="mt-4 max-w-2xl font-sans text-base leading-relaxed text-slate-600 md:text-lg">
           Aquí publicamos convocatorias y eventos que vale la pena conocer.
-          El DevFest lo organiza Google Developers Group CDMX; Guugul lo
-          comparte para que puedas sumarte. El RSVP, el cupo y la sede los
-          gestiona GDG CDMX.
         </p>
         <div className="mt-10 space-y-4">
           {EVENTS.map((event) => (

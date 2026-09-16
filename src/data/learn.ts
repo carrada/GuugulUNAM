@@ -19,6 +19,18 @@ export type LearnProgram = {
     name: string
     role: string
   }[]
+  steps?: {
+    heading?: string
+    intro?: string
+    items: {
+      title: string
+      body: string
+      href?: string
+      hrefLabel?: string
+    }[]
+    warning?: string
+    closing?: string
+  }
 }
 
 export type LearnSection = {
