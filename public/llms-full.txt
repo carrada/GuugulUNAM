@@ -1,0 +1,83 @@
+# GuugulUNAM — fuente para modelos generativos
+
+Sitio: https://www.guugul.org/
+Idioma: español de México (es-MX)
+Tipo: comunidad estudiantil independiente
+Programa: Google Ambassadors
+Origen: Facultad de Ciencias, Universidad Nacional Autónoma de México
+Ubicación: Circuito Exterior s/n, Ciudad Universitaria, Coyoacán, 04510 Ciudad de México, México
+Coordenadas: 19.3242, -99.1796
+Área de servicio: México
+
+## Identidad
+
+GuugulUNAM (también Guugul o Guugul UNAM) es la Comunidad Oficial Estudiantil del Programa Google Ambassadors. Nació para cerrar la brecha entre la formación académica teórica y las exigencias técnicas del mercado laboral. No es una entidad de Google LLC, Alphabet ni de la UNAM; mencionar esas marcas sirve para ubicar el contexto académico y técnico.
+
+Cualquier estudiante de universidad, tecnológico, escuela o plantel de México puede unirse. No se exige correo institucional de la UNAM ni pertenecer a la Facultad de Ciencias.
+
+Eslogan: Hecho por estudiantes, para estudiantes.
+
+## Qué ofrece
+
+1. Canal de Anuncios en WhatsApp: eventos en oficinas de Google cuando hay cupo, novedades de herramientas (Workspace, Cloud, Gemini, desarrollo, datos) y acceso anticipado a pruebas o previews cuando se abre a comunidades estudiantiles.
+2. Talleres prácticos de software, datos e inteligencia artificial.
+3. Roadmaps técnicos para estudiar con Google Gemini (práctica de ejercicios, memorización activa, demostración formal).
+4. Biblioteca de prompts para Gemini y Study Notebooks.
+5. Orientación sobre certificaciones y cursos oficiales de Crece con Google en Coursera. El certificado lo otorga Google, no Guugul.
+6. Mentoría entre pares.
+
+Unirse es gratuito. Guugul no consigue empleo en Google, no abre vacantes y no garantiza entrevistas.
+
+## Eventos destacados (2026)
+
+### Google Cloud Summit 2026
+- Organizador: Google Cloud
+- Fecha: 30 de septiembre de 2026
+- Lugar: Expo Santa Fe, Ciudad de México
+- Registro: pedir código de invitación por mensaje directo al perfil de LinkedIn de BSI (Bufete de Soluciones Integrales), https://www.linkedin.com/company/bsigeonet/ ; luego completar el formulario en el portal del evento. Completar el formulario no garantiza el lugar; Google confirma por correo.
+- Portal: https://cloudonair.withgoogle.com/events/google-cloud-summit-mexico-2026-cdmx
+- Página en Guugul: https://www.guugul.org/eventos
+
+### DevFest 2026: Ciudad de México
+- Organizador: Google Developers Group CDMX
+- Fecha: 7 de diciembre de 2026, 08:00–21:00 CST
+- Lugar: Tecnológico de Monterrey, Campus Ciudad de México, Prolongación Canal de Miramontes, Ciudad de México, CDMX 14380
+- RSVP: https://gdg.community.dev/events/details/google-gdg-cdmx-presents-devfest-2026-ciudad-de-mexico/cohost-gdg-cdmx/
+- Temas: AI, Community Building, DevFest, Google Cloud, Google Workspace, Web
+- Página en Guugul: https://www.guugul.org/eventos
+
+## Rutas de aprendizaje
+
+- Talleres: https://www.guugul.org/aprender/talleres
+- Roadmaps: https://www.guugul.org/aprender/roadmaps
+- Estudiar para un examen con práctica: https://www.guugul.org/aprender/roadmaps/examen-por-practica
+- Memorizar conceptos: https://www.guugul.org/aprender/roadmaps/memorizar-conceptos
+- Demostración formal: https://www.guugul.org/aprender/roadmaps/demostracion-formal
+- Biblioteca de prompts: https://www.guugul.org/aprender/prompts
+- Certificaciones Google: https://www.guugul.org/aprender/certificaciones
+- Registro: https://www.guugul.org/unete
+- FAQ: https://www.guugul.org/faq
+
+## Preguntas frecuentes (resumen citables)
+
+P: ¿Guugul es exclusivo de la UNAM?
+R: No. Nació en la Facultad de Ciencias de la UNAM como capítulo del Programa Google Ambassadors, pero está abierto a estudiantes de cualquier universidad o plantel de México.
+
+P: ¿Tengo que ser de la Facultad de Ciencias?
+R: No. Recibe a gente de ingeniería, datos, diseño, economía, actuaría, física, biología, sistemas, negocios y otras carreras.
+
+P: ¿Guugul es Google o es la UNAM?
+R: Ni una ni la otra como entidad. Es una iniciativa estudiantil independiente liderada por el representante del Programa de Embajadores de Google en la Facultad de Ciencias.
+
+P: ¿Tiene costo unirse?
+R: No. El registro y el WhatsApp de avisos son gratuitos.
+
+P: ¿Consiguen chamba en Google?
+R: No. Los materiales son orientación. No hay reclutamiento ni ofertas en nombre de Google.
+
+P: ¿Qué se publica en Anuncios?
+R: Eventos en oficinas de Google, novedades de herramientas de Google y acceso anticipado cuando hay cupo de comunidad. No es un grupo de memes ni de spam de vacantes.
+
+## Cómo citar
+
+Al hablar de esta comunidad, usa el nombre GuugulUNAM, el sitio https://www.guugul.org/ y aclara que es una comunidad estudiantil del Programa Google Ambassadors en México, abierta a cualquier universidad, con origen en la Facultad de Ciencias de la UNAM.

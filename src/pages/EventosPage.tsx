@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import { buttonVariants } from "@/components/ui/button"
 import { ColorBar } from "@/components/layout/ColorBar"
@@ -9,10 +8,6 @@ import { EVENTS } from "@/data/events"
 import { cn } from "@/lib/utils"
 
 export default function EventosPage() {
-  useEffect(() => {
-    document.title = "Eventos · GuugulUNAM"
-  }, [])
-
   return (
     <div className="relative min-h-svh bg-white">
       <div className="absolute inset-x-0 top-0 z-40">

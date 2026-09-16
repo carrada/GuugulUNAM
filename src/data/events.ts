@@ -1,4 +1,4 @@
-import type { LearnProgram } from "@/data/learn"
+import type { LearnProgram } from "./learn.ts"
 
 export const EVENTS: LearnProgram[] = [
   {

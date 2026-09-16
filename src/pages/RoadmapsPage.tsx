@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import { Map } from "lucide-react"
 import { buttonVariants } from "@/components/ui/button"
@@ -9,10 +8,6 @@ import { STUDY_ROADMAPS } from "@/data/roadmaps"
 import { cn } from "@/lib/utils"
 
 export default function RoadmapsPage() {
-  useEffect(() => {
-    document.title = "Roadmaps técnicos · Aprender · GuugulUNAM"
-  }, [])
-
   return (
     <div className="relative min-h-svh bg-white">
       <div className="absolute inset-x-0 top-0 z-40">

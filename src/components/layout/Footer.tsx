@@ -13,6 +13,13 @@ export function Footer() {
             Comunidad Oficial Estudiantil del Programa Google Ambassadors.
             Abierta a estudiantes de cualquier universidad o plantel.
           </p>
+          <address className="mt-4 max-w-sm font-sans text-xs not-italic text-slate-500">
+            Facultad de Ciencias, UNAM
+            <br />
+            Ciudad Universitaria, Coyoacán
+            <br />
+            04510 Ciudad de México, México
+          </address>
           <p className="mt-4 font-sans text-xs text-slate-500">
             Hecho por estudiantes, para estudiantes.
           </p>

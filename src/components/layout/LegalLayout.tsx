@@ -1,4 +1,4 @@
-import { useEffect, type ReactNode } from "react"
+import type { ReactNode } from "react"
 import { ColorBar } from "@/components/layout/ColorBar"
 import { Footer } from "@/components/layout/Footer"
 import { Navbar } from "@/components/layout/Navbar"
@@ -10,9 +10,6 @@ type LegalLayoutProps = {
 }
 
 export function LegalLayout({ title, updated, children }: LegalLayoutProps) {
-  useEffect(() => {
-    document.title = `${title} · GuugulUNAM`
-  }, [title])
 
   return (
     <div className="relative min-h-svh bg-white">

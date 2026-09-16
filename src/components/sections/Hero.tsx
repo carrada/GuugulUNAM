@@ -54,7 +54,13 @@ export function Hero() {
         }}
         className="pointer-events-none relative z-10 flex max-w-4xl flex-col items-center justify-center gap-6 px-6"
       >
-        <Wordmark className="text-5xl font-bold tracking-tight md:text-7xl" />
+        <h1 className="m-0">
+          <Wordmark className="text-5xl font-bold tracking-tight md:text-7xl" />
+          <span className="sr-only">
+            GuugulUNAM — Comunidad Oficial Estudiantil del Programa Google
+            Ambassadors
+          </span>
+        </h1>
         <p className="max-w-3xl text-center font-sans text-lg font-medium text-slate-700 md:text-2xl">
           Comunidad Oficial Estudiantil del Programa Google Ambassadors
         </p>

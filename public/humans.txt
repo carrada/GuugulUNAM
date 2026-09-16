@@ -1,0 +1,19 @@
+/* TEAM */
+Comunidad: GuugulUNAM
+Programa: Google Ambassadors
+Origen: Facultad de Ciencias, UNAM
+Ubicación: Ciudad Universitaria, Coyoacán, Ciudad de México, México
+Sitio: https://www.guugul.org/
+
+Diseño y desarrollo web: Chiikö
+https://www.chiiko.design
+
+/* THANKS */
+Google Ambassadors
+Facultad de Ciencias, UNAM
+Estudiantes de la comunidad
+
+/* SITE */
+Idioma: es-MX
+Estándares: HTML5, Schema.org JSON-LD, Open Graph
+Última actualización: 2026-09-16

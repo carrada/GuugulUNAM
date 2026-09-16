@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import { Link, Navigate, useParams } from "react-router-dom"
 import { buttonVariants } from "@/components/ui/button"
 import { ColorBar } from "@/components/layout/ColorBar"
@@ -11,12 +10,6 @@ import { cn } from "@/lib/utils"
 export default function LearnTrackPage() {
   const { slug } = useParams()
   const track = slug ? getLearnTrack(slug) : undefined
-
-  useEffect(() => {
-    if (track) {
-      document.title = `${track.title} · Aprender · GuugulUNAM`
-    }
-  }, [track])
 
   if (!track) {
     return <Navigate to="/aprender" replace />

@@ -1,0 +1,24 @@
+# GuugulUNAM
+> Comunidad Oficial Estudiantil del Programa Google Ambassadors. Iniciativa estudiantil independiente nacida en la Facultad de Ciencias de la UNAM (Ciudad Universitaria, Coyoacán, Ciudad de México). Abierta a estudiantes de cualquier universidad, tecnológico, escuela o plantel de México.
+
+GuugulUNAM no es Google LLC ni la UNAM como entidad. Es un capítulo estudiantil del Programa Google Ambassadors: talleres, roadmaps, prompts, certificaciones y un canal de avisos en WhatsApp.
+
+## Sitio
+- [Inicio](https://www.guugul.org/): qué es GuugulUNAM y cómo cierra la brecha entre el aula y el mercado laboral.
+- [Únete](https://www.guugul.org/unete): registro gratuito al canal de Anuncios.
+- [Eventos](https://www.guugul.org/eventos): Google Cloud Summit 2026 y DevFest 2026 CDMX.
+- [Aprender](https://www.guugul.org/aprender): talleres, roadmaps, prompts y certificaciones de Google.
+- [FAQ](https://www.guugul.org/faq): quién puede entrar, qué se publica y qué no promete la comunidad.
+- [Aviso legal](https://www.guugul.org/aviso-legal)
+- [Términos](https://www.guugul.org/terminos-y-condiciones)
+
+## Hechos clave
+- Sede académica: Facultad de Ciencias, UNAM, Ciudad Universitaria, Coyoacán, 04510 Ciudad de México, México.
+- Audiencia: estudiantes de México, no solo UNAM ni solo Ciencias.
+- Canal: WhatsApp de Anuncios (eventos, herramientas de Google, acceso anticipado).
+- Costo: unirse es gratuito.
+- Relación con Google: programa de embajadores; Guugul no contrata ni certifica en nombre de Google.
+
+## Opcional
+- [llms-full.txt](https://www.guugul.org/llms-full.txt): descripción extendida, eventos, FAQ y rutas de aprendizaje.
+- [sitemap.xml](https://www.guugul.org/sitemap.xml)

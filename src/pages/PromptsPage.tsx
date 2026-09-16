@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import { BookOpen } from "lucide-react"
 import { buttonVariants } from "@/components/ui/button"
@@ -10,10 +9,6 @@ import { PROMPT_CATEGORIES } from "@/data/prompts"
 import { cn } from "@/lib/utils"
 
 export default function PromptsPage() {
-  useEffect(() => {
-    document.title = "Biblioteca de prompts · Aprender · GuugulUNAM"
-  }, [])
-
   return (
     <div className="relative min-h-svh bg-white">
       <div className="absolute inset-x-0 top-0 z-40">

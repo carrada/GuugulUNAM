@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import { Link, Navigate, useParams } from "react-router-dom"
 import { buttonVariants } from "@/components/ui/button"
 import { ColorBar } from "@/components/layout/ColorBar"
@@ -11,12 +10,6 @@ import { cn } from "@/lib/utils"
 export default function RoadmapPage() {
   const { slug } = useParams()
   const roadmap = slug ? getStudyRoadmap(slug) : undefined
-
-  useEffect(() => {
-    if (roadmap) {
-      document.title = `${roadmap.title} · Roadmaps · GuugulUNAM`
-    }
-  }, [roadmap])
 
   if (!roadmap) {
     return <Navigate to="/aprender/roadmaps" replace />

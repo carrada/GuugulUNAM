@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import { JoinForm } from "@/components/join/JoinForm"
 import { ColorBar } from "@/components/layout/ColorBar"
@@ -6,10 +5,6 @@ import { Footer } from "@/components/layout/Footer"
 import { Navbar } from "@/components/layout/Navbar"
 
 export default function JoinPage() {
-  useEffect(() => {
-    document.title = "Únete · GuugulUNAM"
-  }, [])
-
   return (
     <div className="relative min-h-svh bg-white">
       <div className="absolute inset-x-0 top-0 z-40">

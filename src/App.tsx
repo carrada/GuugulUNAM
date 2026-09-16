@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { ScrollManager } from "@/components/layout/ScrollManager"
+import { Seo } from "@/components/seo/Seo"
 import HomePage from "@/pages/HomePage"
 import AvisoLegalPage from "@/pages/AvisoLegalPage"
 import EventosPage from "@/pages/EventosPage"
@@ -15,6 +16,7 @@ import TerminosPage from "@/pages/TerminosPage"
 export default function App() {
   return (
     <BrowserRouter>
+      <Seo />
       <ScrollManager />
       <Routes>
         <Route path="/" element={<HomePage />} />

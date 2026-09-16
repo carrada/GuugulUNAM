@@ -3,49 +3,36 @@ import path from "node:path"
 import tailwindcss from "@tailwindcss/vite"
 import react from "@vitejs/plugin-react"
 import { defineConfig, type Plugin } from "vite"
+import { INDEXABLE_PATHS } from "./src/seo/pages.ts"
+import { applySeoToHtml, buildRobotsTxt, buildSitemapXml } from "./src/seo/html.ts"
 
-const SITE_URL = "https://www.guugul.org"
-
-const PREVIEW_ROUTES = [
-  "/unete",
-  "/eventos",
-  "/aprender",
-  "/aprender/prompts",
-  "/aprender/roadmaps",
-  "/aprender/roadmaps/examen-por-practica",
-  "/aprender/roadmaps/memorizar-conceptos",
-  "/aprender/roadmaps/demostracion-formal",
-  "/aprender/talleres",
-  "/aprender/certificaciones",
-  "/faq",
-  "/aviso-legal",
-  "/terminos-y-condiciones",
-]
-
-function copyIndexForLinkPreview(): Plugin {
+function seoPrerender(): Plugin {
   return {
-    name: "copy-index-for-link-preview",
+    name: "seo-prerender",
     closeBundle() {
       const outDir = path.resolve(import.meta.dirname, "dist")
       const indexPath = path.join(outDir, "index.html")
       const index = fs.readFileSync(indexPath, "utf8")
-      const homepageTag = `<meta property="og:url" content="${SITE_URL}/" />`
 
-      for (const route of PREVIEW_ROUTES) {
+      fs.writeFileSync(indexPath, applySeoToHtml(index, "/"))
+      fs.writeFileSync(path.join(outDir, "sitemap.xml"), buildSitemapXml())
+      fs.writeFileSync(path.join(outDir, "robots.txt"), buildRobotsTxt())
+
+      for (const route of INDEXABLE_PATHS) {
+        if (route === "/") continue
         const destDir = path.join(outDir, ...route.slice(1).split("/"))
         fs.mkdirSync(destDir, { recursive: true })
-        const html = index.replace(
-          homepageTag,
-          `<meta property="og:url" content="${SITE_URL}${route}" />`,
+        fs.writeFileSync(
+          path.join(destDir, "index.html"),
+          applySeoToHtml(index, route),
         )
-        fs.writeFileSync(path.join(destDir, "index.html"), html)
       }
     },
   }
 }
 
 export default defineConfig({
-  plugins: [react(), tailwindcss(), copyIndexForLinkPreview()],
+  plugins: [react(), tailwindcss(), seoPrerender()],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "./src"),
