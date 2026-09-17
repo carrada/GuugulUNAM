@@ -127,6 +127,72 @@ export const PROMPT_CATEGORIES: PromptCategory[] = [
     ],
   },
   {
+    title: "Videos en Gemini Omni",
+    intro:
+      "Para dirigir clips en Gemini Omni: un plano claro, cámara, luz, audio y edición conversacional. Omni recorta por defecto; si quieres un solo take, hay que pedirlo.",
+    color: "#174ea6",
+    onColor: "#ffffff",
+    surface: "#d2e3fc",
+    prompts: [
+      {
+        id: "omni-ingeniero-prompt",
+        title: "Ingeniero de prompts para Gemini Omni",
+        when: "Tienes una idea vaga («un video de mi prototipo») y necesitas el brief que Omni sí puede filmar.",
+        where: "Google Gemini en texto (no hace falta modo video todavía). Luego pega la salida en Gemini Omni o en Google AI Studio con gemini-omni-1.1-flash.",
+        prompt:
+          "Actúa como director de fotografía y prompt engineer de Gemini Omni (video nativo, no Veo). Voy a darte una idea cruda; tú NO generes el video: redacta UN solo prompt listo para pegar en Omni.\n\nMi idea: [DESCRIBE EL CLIP EN 1–3 FRASES].\nDuración objetivo: [3–10 s]. Formato: [16:9 o 9:16].\nIdioma on-screen / voz: [español u otro / ninguno].\nReferencias que subiré: [ninguna / foto de personaje / still de producto / storyboard].\n\nEl prompt final DEBE incluir, en este orden, frases concretas (no listas con viñetas):\n1. Toma y movimiento de cámara (wide-angle, medium, close-up; static / locked off / push in / punch in / dolly zoom / handheld / oner).\n2. Sujeto, vestuario y acción física (qué se mueve, con qué ritmo).\n3. Lugar, hora y luz (de dónde viene la luz y qué efecto crea).\n4. Estilo (photoreal, cinematic, anime, claymation, smartphone, etc.).\n5. Audio (música, ambiente, diálogo o «No dialogue»).\n6. Cortes: o «In a single continuous shot. No scene cuts.» o una timeline [0-3s] / [3-6s] / [6-10s].\n7. Texto en pantalla, si aplica, entre comillas y legible.\n\nRestricciones: no pidas 4K ni parámetros de API. No inventes marcas de lente. Si mi idea es ambigua, asume el escenario más cinematográfico y márcalo al final en una línea «Supuestos:». Entrega SOLO el prompt en inglés técnico de dirección (Omni responde mejor así), más una línea en español con qué archivos debo adjuntar.",
+      },
+      {
+        id: "omni-brief-direccion",
+        title: "Brief de dirección (texto a video)",
+        when: "Vas a generar el primer clip desde cero y quieres control de encuadre, luz y clima, no un video genérico.",
+        where: "Gemini Omni en gemini.google.com (modo video) o Google AI Studio, modelo Gemini Omni Flash. Sustituye los corchetes y genera; no regeneres a ciegas: edita en el mismo hilo.",
+        prompt:
+          "A [SHOT: wide-angle / medium / close-up] [CAMERA: static locked-off / slow push in / handheld / drone] of [SUBJECT AND WARDROBE], [ACTION WITH PACE AND PHYSICS], in [LOCATION, TIME OF DAY]. Lit by [LIGHT SOURCE AND QUALITY: crisp sun / warm practicals / ethereal overcast / neon off-screen]. Mood: [realistic / cinematic / grounded / majestic]. Style: [photoreal live-action / film camera / natural smartphone / editorial].\n\nIn a single continuous shot. No scene cuts.\nDuration: about [6] seconds. Aspect: [16:9].\nSound design: [ambient + optional music]. No dialogue. No extra sound effects. No embellishments.\nMicro-detail: natural expression, believable timing, rich but unforced background.\n\nSubject to film: [QUÉ DEBE VERSE, en español o inglés]. Keep the world physically coherent.",
+      },
+      {
+        id: "omni-plano-secuencia",
+        title: "Plano secuencia (oner, sin cortes)",
+        when: "Omni te arma un montaje con varios shots y tú querías un solo take continuo.",
+        where: "Gemini Omni, en el mismo chat del clip o al generar de nuevo. Si ya tienes el video, pide el cambio y añade «Keep everything else the same».",
+        prompt:
+          "Reshoot this as one continuous shot / oner. No scene cuts. No jump cuts. No coverage. Camera: [static locked-off / slow lateral track / handheld following the subject]. Start on [FIRST BEAT], hold through [MIDDLE ACTION], end on [LAST BEAT] without cutting away.\n\nKeep the same subject, wardrobe, location and lighting. Keep everything else the same.\nSound design stays continuous (no music stingers on imaginary cuts). No dialogue unless the subject already speaks.",
+      },
+      {
+        id: "omni-imagen-a-video",
+        title: "De foto o still a video (consistencia)",
+        when: "Tienes un still (foto real, producto o imagen de Nano Banana) y quieres que se mueva sin cambiar al personaje u objeto.",
+        where: "Gemini Omni. Adjunta la imagen ANTES de pegar el prompt. Si hay varias, nómbralas en orden de adjunto (primera = personaje, segunda = estilo, etc.).",
+        prompt:
+          "Use the given image(s) as references for video generation. The images should not be used as literal initial frames unless I say so.\n\n<IMAGE_REF_0> is the hero (face, body, clothes, colors). Keep likeness, proportions and wardrobe identical in every frame.\nOptional: <IMAGE_REF_1> is style and palette only.\nIf I also attached a starting frame: <FIRST_FRAME> begin exactly on that composition.\n\nAction: [DESCRIBE MOTION — camera + subject + environment; avoid «make it move»].\nIn a single continuous shot. No scene cuts.\nLighting matches the reference. Photoreal unless the still is illustrated.\nSound design: [ambiente]. No dialogue.\nKeep everything not named here the same as the reference.",
+      },
+      {
+        id: "omni-edicion-iterativa",
+        title: "Edición conversacional (sin regenerar)",
+        when: "El clip ya está al ~80 %: quieres un cambio puntual (fondo, objeto, cámara, estilo) y conservar el resto.",
+        where: "El mismo hilo de Gemini Omni donde salió el video. Prompts cortos; si escribes una novela, Omni cambia de más.",
+        prompt:
+          "Keep everything else the same.\nChange ONLY this: [UN CAMBIO: p. ej. «Change the camera angle to over the shoulder» / «Make this video claymation» / «Add a cat that jumps onto the lap» / «Make the phone invisible» / «Change the text on the sign to say \"…\"»].\nDo not restage the scene. Do not recast. Do not change lighting, wardrobe, location or audio unless that is the one change.\nNo extra sound effects. No embellishments.",
+      },
+      {
+        id: "omni-audio-texto-tiempo",
+        title: "Audio, texto en pantalla y timings",
+        when: "El video se ve bien pero el sonido, el copy o el ritmo de cortes están mal (o quieres un sizzle con palabras a tiempo).",
+        where: "Gemini Omni, al generar o en una edición del mismo chat. Si solo cambias audio/texto, termina con «Keep everything else the same».",
+        prompt:
+          "Keep everything else the same unless a beat below needs a cut.\n\nAudio: [silence / no dialogue / include calm background music / high-energy techno beat / low tinny radio in the background]. No extra sound effects unless listed.\nOn-screen text (readable, correct spelling): [ninguno / una frase entre comillas / word-by-word].\nIf word-by-word: one word on screen at a time: \"[palabra1, palabra2, …]\". Each word ~1s, different animated style, paced to the rhythm. No dialogue.\n\nTimeline (0s = start of this clip or of the extension):\n[0-3s] [BEAT]\n[3-6s] [BEAT]\n[6-10s] [BEAT]\nAt [5s] [audio o acción, p. ej. the chorus starts].\nIf I asked for a single shot, ignore new cuts and keep one continuous shot.",
+      },
+      {
+        id: "omni-extender-storyboard",
+        title: "Extender escena, storyboard y primer/último frame",
+        when: "El clip de ~10 s funciona y quieres continuar hasta 40 s, o ya tienes storyboard / frame inicial y final.",
+        where: "Gemini Omni 1.1 en el mismo hilo («Extend this video») o con imágenes: storyboard, first frame y last frame adjuntos en ese orden.",
+        prompt:
+          "Extend this video. The scene continues. One continuous movement unless I request a cut.\nWhat happens next: [ACCIÓN, CÁMARA Y EMOCIÓN]. Audio: [the music continues into the chorus / ambiente igual / cambio concreto]. Same characters, wardrobe and space.\nIf using timestamps, 0s is the START of the extension, not the original clip. After [2s], [qué ocurre].\n\nIf I attached a storyboard image: Follow the story exactly in order, starting top left. Entire story in 10 seconds. Cinematic.\nIf I attached start/end stills: <FIRST_FRAME> <LAST_FRAME> interpolate a continuous shot, no jump cuts. Camera path: [whip-pan / orbit / push in / zoom]. Final frame must match the last image.\nFor a loop: use the same image as first frame and last frame.\nKeep everything else the same.",
+      },
+    ],
+  },
+  {
     title: "Empleabilidad y desarrollo profesional",
     intro:
       "Para destacar en vacantes tech: CV, entrevistas y desglose de un producto en tareas.",

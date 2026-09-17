@@ -130,14 +130,15 @@ export const LEARN_TRACKS: LearnTrack[] = [
   {
     slug: "prompts",
     title: "Biblioteca de prompts",
-    body: "Mega-prompts para Gemini y Study Notebooks: estudio, código, diseño y empleabilidad, listos para copiar y adaptar.",
+    body: "Mega-prompts para Gemini, Study Notebooks y Gemini Omni: estudio, código, diseño, video y empleabilidad, listos para copiar y adaptar.",
     accent: "bg-[#e8f0fe] text-[#4285F4]",
     icon: BookOpen,
-    lead: "Una colección de prompts estructurados para Google Gemini. Cópialos, sustituye los corchetes y úsalos con tus apuntes, código o vacantes.",
+    lead: "Una colección de prompts estructurados para Google Gemini y Gemini Omni. Cópialos, sustituye los corchetes y úsalos con tus apuntes, código, vacantes o un still para video.",
     items: [
-      "Pensados para Gemini y Study Notebooks, no como atajo para entregar trabajo ajeno.",
+      "Pensados para Gemini, Study Notebooks y Gemini Omni, no como atajo para entregar trabajo ajeno.",
       "Cada ficha indica cuándo usarlo y en qué herramienta pegarlo.",
-      "Sustituye los campos entre corchetes y adjunta tus documentos cuando el prompt lo pida.",
+      "Sustituye los campos entre corchetes y adjunta tus documentos, fotos o el clip previo cuando el prompt lo pida.",
+      "En Omni, edita en el mismo hilo («Keep everything else the same») en lugar de regenerar el video entero.",
       "Revisa siempre la salida: el modelo puede equivocarse.",
     ],
     closing:

@@ -31,8 +31,8 @@ export default function PromptsPage() {
           Biblioteca de prompts
         </h1>
         <p className="mt-4 font-sans text-lg leading-relaxed text-slate-600">
-          Mega-prompts para exprimir Google Gemini y los Study Notebooks:
-          estudio activo, arquitectura, diseño y empleabilidad.
+          Mega-prompts para exprimir Google Gemini, Study Notebooks y Gemini
+          Omni: estudio activo, arquitectura, diseño, video y empleabilidad.
         </p>
 
         <aside className="mt-8 rounded-2xl bg-[#e8f0fe] p-5 font-sans text-sm leading-relaxed text-slate-800">
@@ -43,14 +43,16 @@ export default function PromptsPage() {
             <li>
               <strong>Dónde:</strong> pégalos en{" "}
               <span className="font-medium">Google Gemini</span> (gemini.google.com
-              o la app) o en <span className="font-medium">Study Notebooks</span>{" "}
-              cuando el prompt pida tus apuntes o documentos.
+              o la app), en <span className="font-medium">Study Notebooks</span>{" "}
+              cuando el prompt pida apuntes, o en{" "}
+              <span className="font-medium">Gemini Omni</span> (modo video / Google
+              AI Studio) si la ficha es de video.
             </li>
             <li>
               <strong>Cuándo:</strong> cada ficha lo indica. En general, úsalos
-              para estudiar, diseñar, revisar código o preparar una postulación;
-              no para entregar la salida como si fuera trabajo propio en un
-              examen o tarea.
+              para estudiar, diseñar, dirigir un clip en Omni, revisar código o
+              preparar una postulación; no para entregar la salida como si fuera
+              trabajo propio en un examen o tarea.
             </li>
             <li>
               Sustituye los campos entre corchetes, adjunta archivos si el
