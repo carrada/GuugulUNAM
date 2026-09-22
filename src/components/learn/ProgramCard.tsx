@@ -68,7 +68,21 @@ export function ProgramCard({ program }: { program: LearnProgram }) {
           </ul>
         </div>
       ) : null}
-      {program.speaker ? (
+      {program.speakers?.length ? (
+        <div className="mt-4">
+          <p className="font-sans text-sm font-medium text-slate-900">
+            Speakers
+          </p>
+          <ul className="mt-1 space-y-1 font-sans text-sm text-slate-600">
+            {program.speakers.map((person) => (
+              <li key={person.name}>
+                {person.name}
+                {person.role ? ` · ${person.role}` : ""}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : program.speaker ? (
         <p className="mt-4 font-sans text-sm text-slate-700">
           <span className="font-medium text-slate-900">Speaker: </span>
           {program.speaker.name}, {program.speaker.role}

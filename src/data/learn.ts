@@ -15,6 +15,10 @@ export type LearnProgram = {
     name: string
     role: string
   }
+  speakers?: {
+    name: string
+    role: string
+  }[]
   organizers?: {
     name: string
     role: string
@@ -68,6 +72,71 @@ export const LEARN_TRACKS: LearnTrack[] = [
     closing:
       "Las fechas, cupos y requisitos se publican en Anuncios. Unirte a la comunidad es la forma de enterarte a tiempo.",
     sections: [
+      {
+        title: "Google Careers on Air · SWE+ LATAM",
+        intro:
+          "Estas sesiones las organiza Google en Careers on Air, dentro de los programas para estudiantes de Ingeniería de Software en Latinoamérica. Guugul las comparte para que puedas verlas; el acceso y la reproducción los gestiona Google.",
+        programs: [
+          {
+            title: "Tech: Cómo armar tu CV y prepararte para entrevistas",
+            org: "Google · SWE+ LATAM 2026",
+            when: "Disponible bajo demanda · ~15 min",
+            where: "En línea, Google Careers on Air",
+            href: "https://careersonair.withgoogle.com/events/sweplus-latam/watch?talk=techprograms-spla-2026",
+            cta: "Ver la sesión",
+            themes: [
+              "Career Preparation",
+              "Students",
+              "Latin America",
+              "Software Engineering",
+            ],
+            description:
+              "Sesión para armar un CV técnico y prepararte para entrevistas en Ingeniería de Software de Google. Pensada para estudiantes universitarios de esa área y carreras afines. Está disponible bajo demanda: entra con tu cuenta de Google para reproducirla.",
+            takeaways: [
+              "Cómo estructurar un CV técnico para procesos de Ingeniería de Software en Google.",
+              "Qué esperar y cómo prepararte para las entrevistas del área.",
+              "Dónde seguir las pasantías de Google en Hispanoamérica y activar alertas en Google Careers.",
+            ],
+            speakers: [
+              {
+                name: "Dayra Chiu",
+                role: "Talent Outreach Program Manager",
+              },
+              {
+                name: "María del Pilar",
+                role: "Software Engineer",
+              },
+            ],
+            steps: {
+              heading: "Cómo verla",
+              intro:
+                "La sesión es virtual y queda en Careers on Air. Google pide iniciar sesión para acceder.",
+              items: [
+                {
+                  title: "Abre Careers on Air",
+                  body: "Usa el enlace oficial de la charla SWE+ LATAM 2026.",
+                  href: "https://careersonair.withgoogle.com/events/sweplus-latam/watch?talk=techprograms-spla-2026",
+                  hrefLabel: "Ver Tech: Cómo armar tu CV…",
+                },
+                {
+                  title: "Inicia sesión con Google",
+                  body: "Regístrate o entra con tu cuenta. Sin sesión no se reproduce el video.",
+                },
+                {
+                  title: "Reproduce bajo demanda",
+                  body: "La charla dura unos 15 minutos. Puedes pausarla y volver cuando quieras.",
+                },
+                {
+                  title: "Sigue las vacantes de intern",
+                  body: "En Google Careers filtra por Location y Job Type Intern, y activa las alertas de esa búsqueda.",
+                  href: "https://www.google.com/about/careers/applications/",
+                  hrefLabel: "Google Careers",
+                },
+              ],
+            },
+          },
+        ],
+      },
       {
         title: "Eventos de Google Developers Group CDMX",
         intro:
