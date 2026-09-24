@@ -73,10 +73,108 @@ export const LEARN_TRACKS: LearnTrack[] = [
       "Las fechas, cupos y requisitos se publican en Anuncios. Unirte a la comunidad es la forma de enterarte a tiempo.",
     sections: [
       {
-        title: "Google Careers on Air · SWE+ LATAM",
+        title: "Próximos talleres",
         intro:
-          "Estas sesiones las organiza Google en Careers on Air, dentro de los programas para estudiantes de Ingeniería de Software en Latinoamérica. Guugul las comparte para que puedas verlas; el acceso y la reproducción los gestiona Google.",
+          "Convocatorias abiertas o por venir. El RSVP, el cupo y la sede los gestiona quien organiza cada sesión (GDG CDMX o Google Careers on Air). Guugul las comparte para que puedas sumarte.",
         programs: [
+          {
+            title:
+              "Club de lectura de papers de AI: The Unreasonable Effectiveness of Recurrent Neural Networks",
+            org: "Google Developers Group CDMX",
+            when: "24 de septiembre de 2026, 20:00–21:00 (CST)",
+            href: "https://gdg.community.dev/events/details/google-gdg-cdmx-presents-club-de-lectura-de-papers-de-ai-the-unreasonable-effectiveness-of-recurrent-neural-networks/",
+            cta: "RSVP en GDG CDMX",
+            themes: [
+              "AI",
+              "AI - Gemini",
+              "Build with AI",
+              "Career Development",
+              "Workshop / hands-on session",
+            ],
+            description:
+              "Sesión del Club de Lectura de Papers de IA dedicada al artículo de Andrej Karpathy «The Unreasonable Effectiveness of Recurrent Neural Networks». En un momento de modelos generativos y desarrollo asistido por IA, conviene entender las bases que precedieron a los grandes modelos de lenguaje: cómo las arquitecturas recurrentes (RNN y LSTM) a nivel de caracteres modelan secuencias complejas, desde sintaxis de código hasta prosa. Habrá revisión teórica, replicación experimental en vivo del char-RNN y una mesa de diálogo sobre el impacto histórico frente al rol actual del desarrollador.",
+            activities: [
+              "Revisión teórica y metodológica: desglose de la arquitectura recurrente de Karpathy y su relevancia como predecesora de los Transformers.",
+              "Replicación técnica en vivo: demostración y despliegue del experimento original de generación de texto a nivel de caracteres (char-RNN).",
+              "Mesa redonda: viabilidad de replicar modelos clásicos en hardware local y evolución del rol del programador frente a la automatización del código.",
+            ],
+            takeaways: [
+              "Mecánica interna de las RNNs: cómo procesan dependencias secuenciales y predicen caracteres de forma iterativa.",
+              "Técnicas de entrenamiento y muestreo: configurar texto plano e hiperparámetros básicos para sintetizar secuencias.",
+              "Criterio técnico frente a la automatización: distinguir predicción de patrones de razonamiento analítico en ingeniería de software.",
+            ],
+            organizers: [
+              { name: "Malinali Becerril", role: "Scopely · GDG Organizer" },
+              { name: "Enrique Diaz", role: "Codeflux AI" },
+              { name: "Israel Silva", role: "Lifter Studio · GDG Organizer" },
+            ],
+          },
+          {
+            title: "Crea un videojuego basado en la web con Inteligencia Artificial",
+            org: "Google Developers Group CDMX",
+            when: "25 de septiembre de 2026, 20:00–21:30 (CST)",
+            href: "https://gdg.community.dev/events/details/google-gdg-cdmx-presents-crea-un-videojuego-basado-en-la-web-con-inteligencia-artificial/",
+            cta: "RSVP en GDG CDMX",
+            themes: [
+              "AI",
+              "AI - Gemini",
+              "Build with AI",
+              "Career Development",
+              "Workshop / hands-on session",
+            ],
+            description:
+              "Codelab de GDG CDMX para crear un videojuego web por turnos con Inteligencia Artificial: Firestore con Event Sourcing (historial de partidas y «viajar en el tiempo» entre turnos), Firebase Authentication con Google Sign-In, prototipo en Google AI Studio y despliegue en Cloud Run. Pensado para ingenieras/os de software, investigadoras/es y entusiastas de la tecnología.",
+            activities: [
+              "Usar Google AI Studio para prototipar una app web de videojuego multijugador por turnos.",
+              "Implementar enlaces de invitación compartibles para unirse a la misma partida.",
+              "Almacenar en Firestore con event sourcing para historial y deshacer/repetir turnos.",
+              "Configurar Firebase: Firestore y autenticación con Google Sign-In.",
+              "Probar en el sandbox e desplegar en Cloud Run desde la UI de Google AI Studio.",
+            ],
+            takeaways: [
+              "Usar Build Mode de Google AI Studio para prototipar servicios de juegos full-stack con lenguaje natural.",
+              "Implementar event sourcing en Cloud Firestore para el historial del juego.",
+              "Cómo AI Studio configura integraciones de Firebase Firestore y autenticación.",
+              "Desplegar la app de AI Studio como contenedor serverless en Cloud Run.",
+              "Inspeccionar registros y seguridad en la consola de Firebase.",
+            ],
+            organizers: [
+              { name: "Malinali Becerril", role: "Scopely · GDG Organizer" },
+              { name: "Enrique Diaz", role: "Codeflux AI" },
+              { name: "Israel Silva", role: "Lifter Studio · GDG Organizer" },
+            ],
+          },
+          {
+            title: "Introducción al Cálculo Infinitesimal & Avanzado parte II",
+            org: "Google Developers Group CDMX",
+            when: "26 de septiembre de 2026, 19:00–20:30 (CST)",
+            href: "https://gdg.community.dev/events/details/google-gdg-cdmx-presents-introduccion-al-calculo-infinitesimal-amp-avanzado-parte-ii/",
+            cta: "RSVP en GDG CDMX",
+            themes: [
+              "AI",
+              "AI - Gemini",
+              "Build with AI",
+              "Career Development",
+              "Workshop / hands-on session",
+            ],
+            description:
+              "Sesión del Club de Matemáticas para la Inteligencia Artificial: revisión concisa de derivadas, derivadas parciales y gradientes, y luego implementación práctica de optimización y descenso del gradiente desde cero. Para ingenieras/os de software, investigadoras/es y quien quiera conectar el cálculo con cómo aprenden los modelos de IA.",
+            activities: [
+              "Explicación teórica de la regla de la cadena, el gradiente y su relación con la optimización.",
+              "Codificación paso a paso del algoritmo de Descenso del Gradiente (Gradient Descent) en Python.",
+              "Visualización con Matplotlib y Seaborn de curvas de nivel y convergencia de funciones de pérdida.",
+            ],
+            takeaways: [
+              "El concepto intuitivo y matemático de la derivada en múltiples dimensiones.",
+              "Cómo los modelos de IA «aprenden» minimizando funciones de error.",
+              "Aplicación de SciPy para resolver problemas de optimización matemática.",
+            ],
+            organizers: [
+              { name: "Malinali Becerril", role: "Scopely · GDG Organizer" },
+              { name: "Enrique Diaz", role: "Codeflux AI" },
+              { name: "Israel Silva", role: "Lifter Studio · GDG Organizer" },
+            ],
+          },
           {
             title: "Tech: Cómo armar tu CV y prepararte para entrevistas",
             org: "Google · SWE+ LATAM 2026",
@@ -138,16 +236,16 @@ export const LEARN_TRACKS: LearnTrack[] = [
         ],
       },
       {
-        title: "Eventos de Google Developers Group CDMX",
+        title: "Talleres pasados",
         intro:
-          "Estos talleres y encuentros los organiza Google Developers Group CDMX. Guugul los comparte para que puedas sumarte; el RSVP, el cupo y la sede los gestiona GDG CDMX.",
+          "Sesiones que ya ocurrieron. Quedan aquí como referencia; el RSVP y cualquier grabación (si existe) los gestiona quien organizó el evento.",
         programs: [
           {
             title: "Club de lectura de papers de AI: The Illusion of Thinking",
             org: "Google Developers Group CDMX",
             when: "10 de septiembre de 2026, 20:00–21:00 (CST)",
             href: "https://gdg.community.dev/events/details/google-gdg-cdmx-presents-club-de-lectura-de-papers-de-ai-the-illusion-of-thinking/",
-            cta: "RSVP en GDG CDMX",
+            cta: "Ver en GDG CDMX",
             themes: [
               "Build with AI",
               "Conference",
