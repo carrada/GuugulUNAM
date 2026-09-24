@@ -32,7 +32,8 @@ export default function PromptsPage() {
         </h1>
         <p className="mt-4 font-sans text-lg leading-relaxed text-slate-600">
           Mega-prompts para exprimir Google Gemini, Study Notebooks y Gemini
-          Omni: estudio activo, arquitectura, diseño, video y empleabilidad.
+          Omni: estudio activo, arquitectura, diseño, video, bienestar y
+          empleabilidad.
         </p>
 
         <aside className="mt-8 rounded-2xl bg-[#e8f0fe] p-5 font-sans text-sm leading-relaxed text-slate-800">
@@ -50,13 +51,19 @@ export default function PromptsPage() {
             </li>
             <li>
               <strong>Cuándo:</strong> cada ficha lo indica. En general, úsalos
-              para estudiar, diseñar, dirigir un clip en Omni, revisar código o
-              preparar una postulación; no para entregar la salida como si fuera
-              trabajo propio en un examen o tarea.
+              para estudiar, diseñar, dirigir un clip en Omni, bajar carga
+              mental, revisar código o preparar una postulación; no para
+              entregar la salida como si fuera trabajo propio en un examen o
+              tarea.
             </li>
             <li>
               Sustituye los campos entre corchetes, adjunta archivos si el
               prompt lo pide y revisa siempre el resultado.
+            </li>
+            <li>
+              Los prompts de bienestar ayudan a organizar y regular la carga;
+              <span className="font-medium"> no sustituyen terapia</span> ni
+              atención de emergencia. Si estás en crisis, busca ayuda humana.
             </li>
           </ul>
         </aside>

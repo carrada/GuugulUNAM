@@ -193,6 +193,72 @@ export const PROMPT_CATEGORIES: PromptCategory[] = [
     ],
   },
   {
+    title: "Bienestar y carga mental en la universidad",
+    intro:
+      "Para bajar la sobrecarga cognitiva: priorizar, cerrar bucles mentales y organizar el semestre sin que Gemini se haga pasar por terapeuta. Si hay crisis, ideación suicida o no puedes funcionar, busca ayuda humana (servicios de psicología de tu universidad o líneas de emergencia locales); estos prompts no diagnostican ni tratan.",
+    color: "#00897B",
+    onColor: "#ffffff",
+    surface: "#e0f2f1",
+    prompts: [
+      {
+        id: "vaciado-cabeza",
+        title: "Vaciado de cabeza (externalizar la carga)",
+        when: "Cuando tienes mil frentes abiertos, no sabes por dónde empezar y la ansiedad viene de la lista invisible en tu mente.",
+        where: "Google Gemini. Escribe libremente o pega un dump de pendientes; no hace falta que esté ordenado.",
+        prompt:
+          "Actúa como un coach de carga cognitiva para estudiantes universitarios (NO eres terapeuta ni das diagnóstico clínico). Voy a vaciar todo lo que tengo en la cabeza: materias, entregas, trabajo, trámites, temas personales y lo que me preocupa sin forma.\n\nMi dump:\n[PEGA AQUÍ TODO, SIN FILTRAR]\n\nHaz esto, en este orden:\n1. Reorganiza en cuatro columnas Markdown: Académico urgente | Académico importante no urgente | Logística/vida | Ruido (preocupaciones sin acción clara).\n2. Para cada ítem académico, estima esfuerzo (S/M/L) y fecha real o «sin fecha».\n3. Señala bucles abiertos (cosas que solo ocupan RAM mental) y proponme el siguiente paso físico mínimo (menos de 15 min) para cerrarlos o aparcarlos.\n4. Elige SOLO tres prioridades para las próximas 48 horas y explica por qué el resto puede esperar.\n5. Termina con una frase de permiso explícito para no hacer el resto hoy.\n\nRestricciones: no moralices, no digas «solo relájate», no minimices. Si detectas señales de crisis o riesgo (autolesión, ideación suicida, violencia), interrumpe el plan y dime con claridad que necesito ayuda humana inmediata y a dónde acudir en mi contexto universitario.",
+      },
+      {
+        id: "triage-semana",
+        title: "Triage de la semana sobrecargada",
+        when: "Al inicio de una semana imposible: parciales, entregas y actividades al mismo tiempo.",
+        where: "Google Gemini. Sustituye los corchetes con tu calendario real.",
+        prompt:
+          "Actúa como un estratega académico de semestres reales (NO coach motivacional vacío). Esta es mi semana:\n\nMaterias y pesos: [LISTA CON % O IMPORTANCIA]\nEntregas y exámenes (con fechas y horas): [LISTA]\nHoras reales disponibles (sueño, transporte, trabajo): [NÚMERO Y BLOQUES]\nEnergía subjetiva hoy (1–10): [N]\nRestricciones no negociables: [ej. trabajo 4h, cuidado familiar]\n\nDiseña un plan de triage:\n1. Matriz impacto × urgencia: qué proteger, qué reducir al mínimo viable, qué negociar o dejar caer con el menor daño.\n2. «Definición de hecho» mínima por entrega (qué cuenta como entregable aceptable, no perfecto).\n3. Bloques de calendario para 5 días, con buffers y una franja de recuperación obligatoria.\n4. Una regla anti-perfeccionismo por materia.\n5. Señales de que debo parar y dormir aunque quede trabajo.\n\nSi el plan no cabe en mis horas, dilo con claridad y propon cortes concretos. No inventes horas que no tengo.",
+      },
+      {
+        id: "ansiedad-examen",
+        title: "Contenedor de ansiedad pre-examen",
+        when: "Antes de un parcial o final, cuando el miedo a fallar te impide estudiar o te hace sobreestudiar sin método.",
+        where: "Google Gemini, en un chat corto la noche o la mañana del examen.",
+        prompt:
+          "Actúa como un acompañante de regulación cognitivo-conductual breve para estudiantes (NO eres psicólogo clínico ni sustituyes terapia). Tengo un examen de [MATERIA] el [FECHA/HORA]. Me siento así: [DESCRIBE SÍNTOMAS: rumiación, taquicardia, bloqueo, procrastinación]. Tiempo que me queda: [HORAS]. Lo que ya sé vs. lo que me asusta: [TEXTO].\n\nHaz esto:\n1. Separa hechos de catástrofes imaginarias en dos listas.\n2. Dame un plan de estudio de [X] horas con ciclos cortos (qué practicar, qué NO releer).\n3. Un guion de 60 segundos para cuando me bloquee en el examen (respiración + reencuadre + próximo paso).\n4. Tres límites: cuándo dejo de estudiar, qué sacrifico y qué no revisaré.\n5. Pregúntame UNA sola cosa si te falta dato crítico; si no, no interrogues.\n\nProhibido: prometer que «todo saldrá bien», patologizar o recetar. Si describo crisis o riesgo, prioriza derivarme a ayuda humana.",
+      },
+      {
+        id: "minimo-viable-academico",
+        title: "Mínimo viable académico (anti-perfeccionismo)",
+        when: "Cuando una tarea o proyecto te paraliza porque «tiene que quedar perfecto» y se te come la semana.",
+        where: "Google Gemini. Describe la rúbrica o lo que pide el profesor.",
+        prompt:
+          "Actúa como un editor académico brutalmente pragmático. La tarea es: [DESCRIPCIÓN]. Rúbrica o criterios del profesor: [PEGA O RESUME]. Tiempo real que puedo dedicar: [HORAS]. Nivel que necesito (aprobar / bien / sobresaliente): [ELIGE UNO].\n\nEntrégame:\n1. La versión Mínimo Viable que cumple la rúbrica (estructura, secciones, extensión).\n2. Qué es «nice to have» y debe ir a una lista B que solo abro si sobra tiempo.\n3. Checklist de 30 minutos finales antes de entregar.\n4. Frases que me estoy diciendo que alimentan el perfeccionismo y un contraargumento concreto por cada una.\n5. Un criterio explícito de «cerrar y enviar» (condiciones observables).\n\nNo reescribas el trabajo completo a menos que te lo pida. Tu objetivo es que yo entregue a tiempo sin destruirme.",
+      },
+      {
+        id: "senales-agotamiento",
+        title: "Radar de agotamiento y límites del semestre",
+        when: "Cuando llevas semanas al límite y no sabes si es «normal de la carrera» o estás quemándote.",
+        where: "Google Gemini. Responde con honestidad; puedes iterar en el mismo chat.",
+        prompt:
+          "Actúa como un orientador de bienestar estudiantil basado en evidencia de carga y burnout académico (NO diagnostiques trastornos ni digas «tienes depresión/ansiedad»). Voy a describir cómo estoy funcionando.\n\nSueño: [ ]\nÁnimo y motivación: [ ]\nRendimiento vs. esfuerzo: [ ]\nCuerpo (dolor, enfermedad, apetito): [ ]\nVínculos y aislamiento: [ ]\nUso de estimulantes/cafeína/all-nighters: [ ]\nLo que «debería» estar haciendo vs. lo que puedo: [ ]\n\nResponde con:\n1. Un semáforo (verde/ámbar/rojo) de sobrecarga con criterios observables, no juicios.\n2. Tres ajustes de carga para las próximas 72 horas (académicos y de recuperación).\n3. Conversaciones concretas que podría tener (profesor, tutor, familia) con un borrador de mensaje corto.\n4. Señales de que debo escalar a apoyo profesional o servicios de psicología de mi universidad.\n5. Un plan B académico si bajo el ritmo (qué materias proteger).\n\nTono: directo, respetuoso, sin romanticizar el sufrimiento universitario. Si hay riesgo de daño, prioriza la derivación.",
+      },
+      {
+        id: "despues-del-golpe",
+        title: "Después del golpe (reprobación o mala nota)",
+        when: "Justo después de un resultado malo, cuando la vergüenza o la rumiación no te dejan planear el siguiente paso.",
+        where: "Google Gemini, el mismo día o al día siguiente del resultado.",
+        prompt:
+          "Actúa como un mentor académico que ha visto reprobaciones reales (NO eres terapeuta). Acabo de obtener este resultado: [NOTA / REPROBÉ / NO ENTREGUÉ] en [MATERIA]. Contexto: [oportunidades, peso del examen, lo que pasó]. Lo que me estoy diciendo a mí: [TEXTO].\n\nHaz esto:\n1. Valida la emoción en 2–3 líneas sin endulzar.\n2. Separa identidad («soy un fracaso») de evento («este resultado ocurrió»).\n3. Análisis causal útil: controlable vs. no controlable; sin culpar de más ni exculpar de más.\n4. Plan de 7 días: trámites (si aplica), conversación con profesor, plan de estudio del siguiente corte, y un día sin «arreglarlo todo».\n5. Una micro-victoria académica para mañana que no dependa de motivación alta.\n\nProhibido: toxic positivity, compararme con genios, o decir que «el fracaso es un regalo» sin plan. Si expreso desesperanza profunda o riesgo, deriva a ayuda humana.",
+      },
+      {
+        id: "limites-digitales-estudio",
+        title: "Límites digitales y foco sin culpa",
+        when: "Cuando el celular, las redes o el multitasking te roban las horas de estudio y luego te castigas.",
+        where: "Google Gemini. Sé concreto con tus apps y horarios.",
+        prompt:
+          "Actúa como un diseñador de sistemas de atención para estudiantes (estilo «environment design», no fuerza de voluntad mágica). Mi realidad: estudio [DÓNDE], me distraigo con [APPS/SITIOS], mis bloques posibles son [HORARIOS], y mi meta de hoy/semana es [META].\n\nDiseña:\n1. Un protocolo de foco de 90 minutos (antes / durante / después) realista para mi contexto.\n2. Reglas if-then para cuando abra el teléfono («si abro X, entonces…»).\n3. Qué eliminar, qué posponer y qué permitir sin culpa (incluyendo ocio programado).\n4. Cómo recuperar una tarde perdida sin castigarme hasta la madrugada.\n5. Un cierre de día de 5 minutos para no cargar pendientes a la cama.\n\nNo me pidas disciplina heroica. Prefiero fricción ambiental y planes cortos. Si mi meta es inhumana, redúcela.",
+      },
+    ],
+  },
+  {
     title: "Empleabilidad y desarrollo profesional",
     intro:
       "Para destacar en vacantes tech: CV, entrevistas y desglose de un producto en tareas.",

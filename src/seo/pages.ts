@@ -58,7 +58,7 @@ export const PAGES: PageSeo[] = [
     path: "/aprender/prompts",
     title: `Biblioteca de prompts para Gemini · Aprender · ${SITE_NAME}`,
     description:
-      "Mega-prompts para Google Gemini, Study Notebooks y Gemini Omni: estudio, código, diseño, video y empleabilidad. Cópialos y adáptalos.",
+      "Mega-prompts para Google Gemini, Study Notebooks y Gemini Omni: estudio, código, diseño, video, bienestar académico y empleabilidad. Cópialos y adáptalos.",
     changefreq: "monthly",
     priority: 0.8,
   },
