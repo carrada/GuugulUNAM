@@ -57,20 +57,14 @@ export function Hero() {
         <h1 className="m-0">
           <Wordmark className="text-5xl font-bold tracking-tight md:text-7xl" />
           <span className="sr-only">
-            GuugulUNAM — Comunidad Oficial Estudiantil del Programa Google
-            Ambassadors
+            GuugulUNAM — Comunidad Oficial Estudiantil Impulsada por Estudiantes
+            Embajadores Google
           </span>
         </h1>
         <p className="max-w-3xl text-center font-sans text-lg font-medium text-slate-700 md:text-2xl">
-          Comunidad Oficial Estudiantil del Programa Google Ambassadors
+          Comunidad Oficial Estudiantil Impulsada por Estudiantes Embajadores
+          Google
         </p>
-        <div className="flex max-w-2xl flex-col gap-3 text-center font-sans text-base text-slate-600 md:text-lg">
-          <p>Hecho por estudiantes, para estudiantes.</p>
-          <p>
-            Cerramos la brecha entre la formación académica y el mercado
-            laboral global.
-          </p>
-        </div>
         <div className="pointer-events-auto mt-2 flex flex-wrap items-center justify-center gap-3">
           <Link
             to="/unete"

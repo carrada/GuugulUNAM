@@ -28,7 +28,7 @@ export function ProgramCard({ program }: { program: LearnProgram }) {
           {program.themes.map((theme) => (
             <li
               key={theme}
-              className="rounded-full bg-[#e8f0fe] px-2.5 py-1 font-sans text-xs font-medium text-[#1967d2]"
+              className="rounded-full bg-[#dbeafe] px-2.5 py-1 font-sans text-xs font-medium text-[#1d4ed8]"
             >
               {theme}
             </li>
@@ -116,7 +116,7 @@ export function ProgramCard({ program }: { program: LearnProgram }) {
           <ol className="mt-3 space-y-3">
             {program.steps.items.map((step, index) => (
               <li key={step.title} className="flex gap-3">
-                <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-[#e8f0fe] font-sans text-xs font-medium text-[#1967d2]">
+                <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-[#dbeafe] font-sans text-xs font-medium text-[#1d4ed8]">
                   {index + 1}
                 </span>
                 <div>

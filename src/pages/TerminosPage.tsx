@@ -9,7 +9,7 @@ export default function TerminosPage() {
       <section>
         <h2>1. Aceptación de los términos</h2>
         <p>
-          Estos términos y condiciones regulan el uso de guugulunam.org y la
+          Estos términos y condiciones regulan el uso de guugul.org y la
           participación en las actividades de GuugulUNAM, Comunidad Oficial
           Estudiantil del Programa Google Ambassadors en la Facultad de
           Ciencias de la UNAM. Al navegar el sitio, descargar materiales,
@@ -123,7 +123,7 @@ export default function TerminosPage() {
           antes de activarla.
         </p>
         <p>
-          Al continuar navegando en guugulunam.org, aceptas el uso de estas
+          Al continuar navegando en guugul.org, aceptas el uso de estas
           herramientas técnicas necesarias para la operatividad del sitio. Puedes configurar tu
           navegador para bloquear cookies; si lo haces, es posible que
           algunas funciones dejen de verse o de guardarse correctamente. Las
@@ -197,7 +197,7 @@ export default function TerminosPage() {
           derechos de autor, sin perjuicio de los derechos irrenunciables que
           correspondan a la persona usuaria. Para notificaciones relacionadas
           con el uso del sitio, cookies o conducta en la comunidad, utiliza
-          los canales de contacto publicados en guugulunam.org.
+          los canales de contacto publicados en guugul.org.
         </p>
         <p>
           La participación en GuugulUNAM es voluntaria. Quien no desee

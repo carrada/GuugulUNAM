@@ -5,53 +5,26 @@
 @custom-variant dark (&:is(.dark *));
 
 @font-face {
-  font-family: "Google Sans";
-  src: url("./assets/fonts/google-sans/GoogleSans-VariableFont_GRAD,opsz,wght.ttf")
+  font-family: "Plus Jakarta Sans";
+  src: url("./assets/fonts/plus-jakarta-sans/PlusJakartaSans-VariableFont_wght.ttf")
     format("truetype");
-  font-weight: 100 900;
+  font-weight: 200 800;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Product Sans";
-  src: url("./assets/fonts/product-sans/product-sans-regular.ttf")
+  font-family: "Plus Jakarta Sans";
+  src: url("./assets/fonts/plus-jakarta-sans/PlusJakartaSans-Italic-VariableFont_wght.ttf")
     format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Product Sans";
-  src: url("./assets/fonts/product-sans/product-sans-italic.ttf")
-    format("truetype");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Product Sans";
-  src: url("./assets/fonts/product-sans/product-sans-bold.ttf")
-    format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Product Sans";
-  src: url("./assets/fonts/product-sans/product-sans-bold-italic.ttf")
-    format("truetype");
-  font-weight: 700;
+  font-weight: 200 800;
   font-style: italic;
   font-display: swap;
 }
 
 @theme inline {
-  --font-sans: "Google Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-heading: "Product Sans", "Google Sans", ui-sans-serif, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --color-google-blue: var(--google-blue);
   --color-google-red: var(--google-red);
   --color-google-yellow: var(--google-yellow);
@@ -97,76 +70,76 @@
 }
 
 :root {
-  --google-blue: #4285f4;
-  --google-red: #db4437;
-  --google-yellow: #f4b400;
-  --google-green: #0f9d58;
+  --google-blue: #2563eb;
+  --google-red: #ff3131;
+  --google-yellow: #fabd09;
+  --google-green: #00ab4b;
   --background: #ffffff;
-  --foreground: #202124;
+  --foreground: #0f172a;
   --card: #ffffff;
-  --card-foreground: #202124;
+  --card-foreground: #0f172a;
   --popover: #ffffff;
-  --popover-foreground: #202124;
-  --primary: #4285f4;
+  --popover-foreground: #0f172a;
+  --primary: #2563eb;
   --primary-foreground: #ffffff;
-  --secondary: #f1f3f4;
-  --secondary-foreground: #202124;
-  --muted: #f1f3f4;
-  --muted-foreground: #5f6368;
-  --accent: #e8f0fe;
-  --accent-foreground: #1967d2;
-  --destructive: #db4437;
-  --border: #dadce0;
-  --input: #dadce0;
-  --ring: #4285f4;
-  --chart-1: #4285f4;
-  --chart-2: #db4437;
-  --chart-3: #f4b400;
-  --chart-4: #0f9d58;
-  --chart-5: #202124;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #0f172a;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #dbeafe;
+  --accent-foreground: #1d4ed8;
+  --destructive: #ff3131;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #2563eb;
+  --chart-1: #2563eb;
+  --chart-2: #ff3131;
+  --chart-3: #fabd09;
+  --chart-4: #00ab4b;
+  --chart-5: #0f172a;
   --radius: 0.75rem;
   --sidebar: #ffffff;
-  --sidebar-foreground: #202124;
-  --sidebar-primary: #4285f4;
+  --sidebar-foreground: #0f172a;
+  --sidebar-primary: #2563eb;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #e8f0fe;
-  --sidebar-accent-foreground: #1967d2;
-  --sidebar-border: #dadce0;
-  --sidebar-ring: #4285f4;
+  --sidebar-accent: #dbeafe;
+  --sidebar-accent-foreground: #1d4ed8;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #2563eb;
 }
 
 .dark {
   --background: #0b0c0f;
-  --foreground: #f8f9fa;
+  --foreground: #f8fafc;
   --card: #17181c;
-  --card-foreground: #f8f9fa;
+  --card-foreground: #f8fafc;
   --popover: #17181c;
-  --popover-foreground: #f8f9fa;
-  --primary: #4285f4;
+  --popover-foreground: #f8fafc;
+  --primary: #2563eb;
   --primary-foreground: #ffffff;
-  --secondary: #202124;
-  --secondary-foreground: #f8f9fa;
-  --muted: #202124;
-  --muted-foreground: #9aa0a6;
-  --accent: #1a2333;
-  --accent-foreground: #8ab4f8;
-  --destructive: #db4437;
+  --secondary: #1e293b;
+  --secondary-foreground: #f8fafc;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --accent: #1e3a5f;
+  --accent-foreground: #93c5fd;
+  --destructive: #ff3131;
   --border: rgb(255 255 255 / 10%);
   --input: rgb(255 255 255 / 14%);
-  --ring: #4285f4;
-  --chart-1: #4285f4;
-  --chart-2: #db4437;
-  --chart-3: #f4b400;
-  --chart-4: #0f9d58;
-  --chart-5: #f8f9fa;
+  --ring: #2563eb;
+  --chart-1: #2563eb;
+  --chart-2: #ff3131;
+  --chart-3: #fabd09;
+  --chart-4: #00ab4b;
+  --chart-5: #f8fafc;
   --sidebar: #17181c;
-  --sidebar-foreground: #f8f9fa;
-  --sidebar-primary: #4285f4;
+  --sidebar-foreground: #f8fafc;
+  --sidebar-primary: #2563eb;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #1a2333;
-  --sidebar-accent-foreground: #8ab4f8;
+  --sidebar-accent: #1e3a5f;
+  --sidebar-accent-foreground: #93c5fd;
   --sidebar-border: rgb(255 255 255 / 10%);
-  --sidebar-ring: #4285f4;
+  --sidebar-ring: #2563eb;
 }
 
 @layer base {

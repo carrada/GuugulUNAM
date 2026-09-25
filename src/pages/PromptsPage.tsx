@@ -23,7 +23,7 @@ export default function PromptsPage() {
           >
             ← Aprender
           </Link>
-          <div className="flex size-12 items-center justify-center rounded-xl bg-[#e8f0fe] text-[#4285F4]">
+          <div className="flex size-12 items-center justify-center rounded-xl bg-[#dbeafe] text-[#2563eb]">
             <BookOpen className="size-6" aria-hidden="true" />
           </div>
         </div>
@@ -36,7 +36,7 @@ export default function PromptsPage() {
           empleabilidad.
         </p>
 
-        <aside className="mt-8 rounded-2xl bg-[#e8f0fe] p-5 font-sans text-sm leading-relaxed text-slate-800">
+        <aside className="mt-8 rounded-2xl bg-[#dbeafe] p-5 font-sans text-sm leading-relaxed text-slate-800">
           <p className="font-heading text-base font-bold text-slate-900">
             Cuándo y dónde usarlos
           </p>

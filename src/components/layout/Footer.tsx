@@ -10,16 +10,9 @@ export function Footer() {
         <div>
           <Wordmark className="text-3xl font-bold" />
           <p className="mt-3 max-w-sm font-sans text-sm text-slate-600">
-            Comunidad Oficial Estudiantil del Programa Google Ambassadors.
-            Abierta a estudiantes de cualquier universidad o plantel.
+            Comunidad Oficial Estudiantil Impulsada por Estudiantes Embajadores
+            Google. Abierta a estudiantes de cualquier universidad o plantel.
           </p>
-          <address className="mt-4 max-w-sm font-sans text-xs not-italic text-slate-500">
-            Facultad de Ciencias, UNAM
-            <br />
-            Ciudad Universitaria, Coyoacán
-            <br />
-            04510 Ciudad de México, México
-          </address>
           <p className="mt-4 font-sans text-xs text-slate-500">
             Hecho por estudiantes, para estudiantes.
           </p>
@@ -49,6 +42,11 @@ export function Footer() {
           </Link>
         </div>
       </div>
+      <div className="border-t border-black/6 px-6 py-5">
+        <p className="mx-auto max-w-3xl text-center font-sans text-xs leading-relaxed text-slate-500">
+          Sitio independiente. No constituye un canal oficial de Google.
+        </p>
+      </div>
       <div className="border-t border-black/6 px-6 py-6">
         <a
           href="https://www.chiiko.design"
@@ -57,7 +55,7 @@ export function Footer() {
           className="mx-auto flex w-fit flex-col items-center gap-1.5 text-center opacity-80 transition-opacity hover:opacity-100"
         >
           <p className="font-sans text-[11px] tracking-[0.04em] text-slate-500">
-            Web hecha y diseñada por
+            Sitio web hecho y diseñado por
           </p>
           <img
             src="/chiikologosvg.svg"
@@ -65,12 +63,6 @@ export function Footer() {
             className="h-7 w-auto object-contain object-top md:h-8"
           />
         </a>
-      </div>
-      <div className="border-t border-black/6 px-6 py-5">
-        <p className="mx-auto max-w-3xl text-center font-sans text-xs leading-relaxed text-slate-500">
-          Este es un sitio independiente desarrollado por embajadores del
-          programa y no representa un canal oficial de Google.
-        </p>
       </div>
     </footer>
   )

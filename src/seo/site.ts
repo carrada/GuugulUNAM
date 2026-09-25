@@ -31,7 +31,7 @@ export const OG_IMAGE = {
 
 export const LOCALE = "es_MX"
 export const LANGUAGE = "es-MX"
-export const THEME_COLOR = "#4285F4"
+export const THEME_COLOR = "#2563eb"
 
 export const GEO = {
   region: "MX-CMX",

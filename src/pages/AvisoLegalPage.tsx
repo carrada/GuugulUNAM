@@ -50,7 +50,7 @@ export default function AvisoLegalPage() {
         <h2>2. Identificación del sitio</h2>
         <p>
           El presente aviso regula el acceso y uso del sitio web
-          guugulunam.org, así como de los recursos, roadmaps, guías, prompts y
+          guugul.org, así como de los recursos, roadmaps, guías, prompts y
           materiales de orientación técnica que se alojen o enlacen desde
           dicho dominio. Al ingresar al sitio, la persona usuaria reconoce
           haber leído este aviso y acepta las condiciones aquí descritas.
@@ -67,7 +67,7 @@ export default function AvisoLegalPage() {
         <h2>3. Exención de responsabilidad</h2>
         <p>
           Los recursos, roadmaps, guías, prompts, listados de herramientas y
-          contenidos formativos alojados en guugulunam.org son materiales de
+          contenidos formativos alojados en guugul.org son materiales de
           orientación técnica. Se ofrecen con un propósito educativo: ayudar a
           quienes estudian Ciencias a estructurar su aprendizaje autodidacta,
           conocer flujos de trabajo profesionales y familiarizarse con
@@ -166,7 +166,7 @@ export default function AvisoLegalPage() {
           contenido, y no responde por daños derivados de su uso.
         </p>
         <p>
-          Procuramos que guugulunam.org funcione de manera continua, pero
+          Procuramos que guugul.org funcione de manera continua, pero
           podemos interrumpir, modificar o discontinuar secciones del sitio
           por mantenimiento, actualización de materiales o causas ajenas a
           nuestro control. El acceso se ofrece “tal cual” y “según
@@ -180,7 +180,7 @@ export default function AvisoLegalPage() {
           Para dudas sobre este aviso legal, solicitudes relacionadas con
           propiedad intelectual o precisiones sobre la naturaleza del
           proyecto, puedes escribir a la comunidad a través de los canales
-          publicados en guugulunam.org. Este documento puede actualizarse
+          publicados en guugul.org. Este documento puede actualizarse
           cuando cambie el alcance del sitio o de las actividades del
           capítulo. La versión vigente será siempre la publicada en esta
           ruta.

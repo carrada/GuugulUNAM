@@ -20,9 +20,9 @@ export const PROMPT_CATEGORIES: PromptCategory[] = [
     title: "Dominio académico y Study Notebooks",
     intro:
       "Para pasar del aprendizaje pasivo al estudio activo, con tus apuntes o documentos cargados.",
-    color: "#4285F4",
+    color: "#2563eb",
     onColor: "#ffffff",
-    surface: "#e8f0fe",
+    surface: "#dbeafe",
     prompts: [
       {
         id: "tutor-socratico",
@@ -62,9 +62,9 @@ export const PROMPT_CATEGORIES: PromptCategory[] = [
     title: "Desarrollo de software y arquitectura",
     intro:
       "Para código limpio, arquitecturas escalables y revisiones rigurosas, antes o durante el desarrollo.",
-    color: "#EA4335",
+    color: "#ff3131",
     onColor: "#ffffff",
-    surface: "#fce8e6",
+    surface: "#ffe5e5",
     prompts: [
       {
         id: "arquitecto-senior",
@@ -96,9 +96,9 @@ export const PROMPT_CATEGORIES: PromptCategory[] = [
     title: "Diseño UI/UX y generación creativa",
     intro:
       "Para extraer estilos visuales, armar diagramas con carácter y auditar interfaces.",
-    color: "#FBBC05",
+    color: "#fabd09",
     onColor: "#202124",
-    surface: "#fef7e0",
+    surface: "#fff8e1",
     prompts: [
       {
         id: "ingenieria-inversa-visual",
@@ -130,9 +130,9 @@ export const PROMPT_CATEGORIES: PromptCategory[] = [
     title: "Videos en Gemini Omni",
     intro:
       "Para dirigir clips en Gemini Omni: un plano claro, cámara, luz, audio y edición conversacional. Omni recorta por defecto; si quieres un solo take, hay que pedirlo.",
-    color: "#174ea6",
+    color: "#2563eb",
     onColor: "#ffffff",
-    surface: "#d2e3fc",
+    surface: "#dbeafe",
     prompts: [
       {
         id: "omni-ingeniero-prompt",
@@ -196,9 +196,9 @@ export const PROMPT_CATEGORIES: PromptCategory[] = [
     title: "Bienestar y carga mental en la universidad",
     intro:
       "Para bajar la sobrecarga cognitiva: priorizar, cerrar bucles mentales y organizar el semestre sin que Gemini se haga pasar por terapeuta. Si hay crisis, ideación suicida o no puedes funcionar, busca ayuda humana (servicios de psicología de tu universidad o líneas de emergencia locales); estos prompts no diagnostican ni tratan.",
-    color: "#00897B",
+    color: "#00ab4b",
     onColor: "#ffffff",
-    surface: "#e0f2f1",
+    surface: "#e8f8ef",
     prompts: [
       {
         id: "vaciado-cabeza",
@@ -262,9 +262,9 @@ export const PROMPT_CATEGORIES: PromptCategory[] = [
     title: "Empleabilidad y desarrollo profesional",
     intro:
       "Para destacar en vacantes tech: CV, entrevistas y desglose de un producto en tareas.",
-    color: "#34A853",
+    color: "#00ab4b",
     onColor: "#ffffff",
-    surface: "#e6f4ea",
+    surface: "#e8f8ef",
     prompts: [
       {
         id: "cv-ats",

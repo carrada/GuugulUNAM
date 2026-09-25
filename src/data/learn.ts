@@ -298,7 +298,7 @@ export const LEARN_TRACKS: LearnTrack[] = [
     slug: "prompts",
     title: "Biblioteca de prompts",
     body: "Mega-prompts para Gemini, Study Notebooks y Gemini Omni: estudio, código, diseño, video, bienestar y empleabilidad, listos para copiar y adaptar.",
-    accent: "bg-[#e8f0fe] text-[#4285F4]",
+    accent: "bg-[#dbeafe] text-[#2563eb]",
     icon: BookOpen,
     lead: "Una colección de prompts estructurados para Google Gemini y Gemini Omni. Cópialos, sustituye los corchetes y úsalos con tus apuntes, código, vacantes, stills para video o la carga del semestre.",
     items: [

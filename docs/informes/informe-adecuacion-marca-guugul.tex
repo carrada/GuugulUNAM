@@ -1,0 +1,478 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{csquotes}
+\usepackage{microtype}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{mdframed}
+
+\geometry{margin=2.3cm}
+\onehalfspacing
+
+\definecolor{GuugulBlue}{HTML}{2563EB}
+\definecolor{RuleBg}{HTML}{EEF4FF}
+\definecolor{RuleBorder}{HTML}{2563EB}
+\definecolor{WarnBg}{HTML}{FFF8E6}
+\definecolor{WarnBorder}{HTML}{C48A00}
+\definecolor{OkBg}{HTML}{EAF7EF}
+\definecolor{OkBorder}{HTML}{0A7A3A}
+\definecolor{GoogleBlue}{HTML}{4285F4}
+\definecolor{GoogleRed}{HTML}{DB4437}
+\definecolor{GoogleYellow}{HTML}{F4B400}
+\definecolor{GoogleGreen}{HTML}{0F9D58}
+\definecolor{OwnBlue}{HTML}{2563EB}
+\definecolor{OwnRed}{HTML}{FF3131}
+\definecolor{OwnYellow}{HTML}{FABD09}
+\definecolor{OwnGreen}{HTML}{00AB4B}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=GuugulBlue,
+  urlcolor=GuugulBlue,
+  pdftitle={Informe de adecuación de guugul.org a lineamientos de marca y participación},
+  pdfauthor={Guugul --- Embajadores del Programa}
+}
+
+\newmdenv[
+  backgroundcolor=RuleBg,
+  linecolor=RuleBorder,
+  linewidth=1.2pt,
+  roundcorner=2pt,
+  innertopmargin=8pt,
+  innerbottommargin=8pt,
+  innerleftmargin=10pt,
+  innerrightmargin=10pt,
+  skipabove=10pt,
+  skipbelow=10pt
+]{reglabox}
+
+\newmdenv[
+  backgroundcolor=WarnBg,
+  linecolor=WarnBorder,
+  linewidth=1.2pt,
+  roundcorner=2pt,
+  innertopmargin=8pt,
+  innerbottommargin=8pt,
+  innerleftmargin=10pt,
+  innerrightmargin=10pt,
+  skipabove=8pt,
+  skipbelow=8pt
+]{riesgobox}
+
+\newmdenv[
+  backgroundcolor=OkBg,
+  linecolor=OkBorder,
+  linewidth=1.2pt,
+  roundcorner=2pt,
+  innertopmargin=8pt,
+  innerbottommargin=8pt,
+  innerleftmargin=10pt,
+  innerrightmargin=10pt,
+  skipabove=8pt,
+  skipbelow=8pt
+]{cumplbox}
+
+\newcommand{\regla}[2]{%
+  \begin{reglabox}
+  \noindent\textbf{Regla citada --- #1.}\\[0.35em]
+  \small #2
+  \end{reglabox}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Informe de adecuación --- guugul.org}
+\fancyhead[R]{\small 24 de septiembre de 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\title{\textbf{Informe de adecuación del sitio\\guugul.org}\\[0.4em]
+\large Respuesta a observaciones de imagen institucional\\recibidas por WhatsApp\\y alineación con los términos del Programa}
+\author{Guugul\\[0.2em]
+\small Comunidad Oficial Estudiantil Impulsada por\\Estudiantes Embajadores Google}
+\date{24 de septiembre de 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent
+Este informe documenta, con el mayor detalle posible, las correcciones ya implementadas en \url{https://www.guugul.org} ante las observaciones de imagen institucional \textbf{recibidas por WhatsApp} (no por correo electrónico). El mensaje de coordinación felicita la biblioteca de \emph{prompts} en \url{https://www.guugul.org/aprender/prompts} y pide dos ajustes: (i)~dejar de adaptar o aproximar elementos visuales de la marca Google (colores, tipografías, variaciones de logo); y (ii)~incluir un descargo de responsabilidad de sitio no oficial en el pie de página.
+
+Las medidas adoptadas ---retirada de la tipografía Product Sans / Google Sans, abandono de la paleta hexadecimal oficial de Google, adopción de Plus Jakarta Sans y de una paleta cromática propia y numéricamente distinta, nuevo favicon no derivado de logotipos oficiales, lema institucional reformulado y disclaimer en pie--- se fundamentan, además del propio mensaje de WhatsApp, en reglas precisas de:
+
+\begin{itemize}[leftmargin=*,nosep]
+  \item las \emph{Directrices 2026}, apartado~1 (ausencia de vínculo laboral, societario, de agencia o contractual con Amplifica o Google);
+  \item las \emph{Directrices 2026}, apartado~4 (originalidad de envíos y licencia no exclusiva de contenidos);
+  \item el \emph{Término de Autorización}, cláusulas~2 y~4 (medios de difusión limitados a plataformas de Amplifica/Google cuando corresponda; titularidad del embajador; obligación de no generar reclamos por propiedad industrial).
+\end{itemize}
+
+A lo largo del documento, las citas normativas relevantes aparecen \textbf{marcadas en recuadros azules} para facilitar su localización; el contraste cromático \emph{antes/después} se desarrolla con códigos hexadecimales exactos.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Objeto, canal de comunicación y alcance}
+
+\subsection{Canal: WhatsApp, no correo}
+
+Las observaciones a las que responde este informe \textbf{no fueron recibidas por correo electrónico}. Fueron comunicadas por la coordinación del Programa \textbf{mediante WhatsApp}, en un mensaje de seguimiento que:
+
+\begin{enumerate}[leftmargin=*]
+  \item saluda y felicita el trabajo en la página \url{https://www.guugul.org/aprender/prompts};
+  \item reconoce que la idea del Programa es precisamente que los embajadores conecten con su comunidad, se unan entre sí, creen materiales nuevos y sumen valor;
+  \item formula, en ese mismo hilo, las dos observaciones de imagen institucional que se detallan abajo.
+\end{enumerate}
+
+Por tanto, cualquier referencia ulterior a \enquote{el mensaje de coordinación} debe entenderse como \textbf{el mensaje de WhatsApp} descrito, no como un oficio o correo formal. El carácter informal del canal no disminuye la fuerza operativa de las instrucciones: son lineamientos de imagen institucional que el proyecto debe cumplir para apegarse a la identidad oficial de Google.
+
+\subsection{Las dos observaciones concretas}
+
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Cuidado con el uso de la marca.} No adaptar ni modificar logotipos ni elementos visuales de Google directamente (\emph{colores}, \emph{tipografías} o \emph{variaciones del logo}). La coordinación sugiere utilizar una línea gráfica limpia o la \textbf{marca propia} de la iniciativa del embajador, para mantener el respeto a la identidad oficial de la marca.
+  \item \textbf{Descargo de responsabilidad (Disclaimer).} Incluir en el pie de página una nota aclarando que se trata de un sitio no oficial del programa. Texto orientativo sugerido: \enquote{Este es un sitio independiente desarrollado por embajadores del programa y no representa un canal oficial de Google.}
+\end{enumerate}
+
+\subsection{Qué es Guugul en este contexto}
+
+Guugul es una iniciativa estudiantil alojada en el dominio propio \texttt{guugul.org}. Publica materiales de formación (talleres, \emph{roadmaps}, biblioteca de \emph{prompts}, certificaciones orientativas y canal de avisos) creados y curados en el marco de la participación como Embajador. El sitio \textbf{no} es una plataforma de Amplifica ni de Google; es un espacio propio del embajador/comunidad local, y por eso debe lucir y declararse como tal.
+
+Las correcciones descritas en este informe \textbf{ya están aplicadas} en el código del sitio (tipografía, paleta, favicon, pie de página, hero y textos legales).
+
+\section{Fuentes normativas y contractuales}
+
+Las argumentaciones se apoyan en tres fuentes, en este orden de aplicación práctica:
+
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Mensaje de WhatsApp de la coordinación} --- instrucción operativa inmediata sobre apariencia pública del sitio.
+  \item \textbf{Términos y Directrices de Participación del Programa de Estudiantes Embajadores de Google 2026} (en adelante, \emph{Directrices 2026}).
+  \item \textbf{Autorización y Cesión de Uso de Imagen, Voz, Nombre y Derechos de Autor} suscrito con Amplifica Soluções Digitais LTDA.\ (en adelante, \emph{Término de Autorización}).
+\end{enumerate}
+
+Se distingue con rigor:
+
+\begin{itemize}[leftmargin=*]
+  \item \textbf{(a) Lo que regulan los documentos del Programa:} inscripción, conducta, datos personales, originalidad de contenidos, licencia de imagen/voz/autoría del embajador hacia Amplifica (y, en los términos del instrumento, hacia clientes incluyendo a Google).
+  \item \textbf{(b) Lo que pide el mensaje de WhatsApp:} que la apariencia pública de guugul.org \textbf{no induzca confusión de marca} con Google (colores, tipografías, logos) y que el pie declare independencia.
+\end{itemize}
+
+Ambos planos se refuerzan mutuamente: las reglas contractuales explican \emph{por qué} el disclaimer y la marca propia son jurídicamente coherentes; el mensaje de WhatsApp concreta \emph{qué} debía corregirse en la interfaz.
+
+\section{Marco jurídico: reglas precisas que obligan a independencia visual}
+
+\subsection{Regla 1 --- Ausencia de vínculo con Google o Amplifica}
+
+\regla{Directrices 2026, apartado 1 (Sobre el Programa)}{%
+\enquote{el/la participante declara y reconoce que su inscripción, selección y participación en esta comunidad no establecen ningún tipo de vínculo laboral, societario, de agencia, prestación de servicios o relación contractual de trabajo con Amplifica o con Google. Las actividades sugeridas tienen un carácter estrictamente voluntario, de aprendizaje personal y colaborativo\ldots}}
+
+\begin{cumplbox}
+\noindent\textbf{Implicación operativa para guugul.org.}\\[0.3em]
+Si \textbf{no} existe relación de agencia ni representación contractual con Google, el sitio de un embajador \textbf{no puede presentarse} ---ni por tipografía Product/Google Sans, ni por la paleta hexadecimal oficial de Google, ni por logotipos o monogramas--- como canal, producto, sede o propiedad de Google. El descargo en el pie no es decorativo: es la traducción pública de esta regla.
+\end{cumplbox}
+
+\subsection{Regla 2 --- Naturaleza del Programa y rol del Embajador (sin confundir con canal oficial)}
+
+El mismo apartado~1 define el Programa como comunidad educativa y trayecto de capacitación digital y liderazgo, orientado a que estudiantes universitarios se conviertan en \textbf{referentes locales de inteligencia artificial}. El apartado~2 exige, entre otros, alineación con Google Gemini para los estudios y liderazgo universitario (involucrar a otras personas).
+
+La biblioteca de \emph{prompts} y el resto de materiales de Guugul se enmarcan en esa finalidad (cocreación, apoyo entre pares, valor comunitario). El mensaje de WhatsApp reconoce ese empuje. Las correcciones de marca aseguran que ese valor se comunique \textbf{sin apropiarse de la identidad visual oficial de Google}.
+
+\subsection{Regla 3 --- Originalidad de contenidos y licencia no exclusiva}
+
+\regla{Directrices 2026, apartado 4 (Gobernanza de contenido)}{%
+\textbf{Originalidad de los envíos:} el/la Embajador(a) garantiza de forma integral que toda ingeniería de \emph{prompts}, flujos, materiales y plantillas compartidos en el Programa son de su autoría original, se encuentran libres de derechos de terceros y no infringen ningún derecho de propiedad intelectual.\\[0.4em]
+\textbf{Licencia de uso:} mediante el Término de Autorización, se otorga a Amplifica (y clientes incluyendo a Google) una autorización/cesión \textbf{no exclusiva}, gratuita, irrevocable y de alcance mundial sobre imagen, voz, nombre, testimonios y contenidos creados en el marco del Programa, con vigencia durante el Programa y cinco años adicionales; Amplifica conserva archivo institucional de lo ya publicado.}
+
+\begin{cumplbox}
+\noindent\textbf{Implicación.} Los materiales de Guugul deben ser originales (o debidamente licenciados). La licencia hacia Amplifica/Google \textbf{no convierte} al sitio web propio en un activo de marca de Google. Al contrario: al conservar el embajador la titularidad (véase Regla~5), el sitio debe lucir como iniciativa propia.
+\end{cumplbox}
+
+\subsection{Regla 4 --- Medios de difusión: solo plataformas de Amplifica/Google \emph{cuando corresponda}}
+
+\regla{Término de Autorización, cláusula 2 (Medios de difusión y edición)}{%
+Los derechos autorizados podrán ser ejercidos en medios y plataformas de Amplifica y, \emph{cuando corresponda}, de Google. El participante autoriza ediciones técnicas necesarias para adaptar el material a esos medios.}
+
+\begin{riesgobox}
+\noindent\textbf{Precisión normativa.}\\[0.3em]
+La cláusula~2 habilita difusión en canales de Amplifica y, en su caso, de Google. \textbf{No} habilita a presentar un dominio propio (\texttt{guugul.org}) como si fuera uno de esos canales. Por eso el disclaimer de WhatsApp ---\enquote{sitio independiente\ldots no representa un canal oficial de Google}--- es la formulación correcta frente a terceros.
+\end{riesgobox}
+
+\subsection{Regla 5 --- Titularidad del embajador e indemnización por propiedad industrial}
+
+\regla{Término de Autorización, cláusula 4 (Autoría, originalidad e indemnización)}{%
+El participante garantiza ser titular (o contar con licencias) de los contenidos; otorga a Amplifica la licencia prevista; se obliga a sacar en paz y a salvo a Amplifica, sus directivos y clientes (\textbf{incluyendo a Google}) frente a reclamos por infracciones a derechos de autor, \textbf{propiedad industrial} o derechos de imagen.\\[0.4em]
+El participante \textbf{conservará la titularidad} de los derechos de autor sobre los contenidos de su autoría, otorgando a Amplifica únicamente la licencia de uso.}
+
+\begin{riesgobox}
+\noindent\textbf{Precisión normativa --- propiedad industrial.}\\[0.3em]
+La cláusula~4 no solo habla de derechos de autor sobre textos o \emph{prompts}: obliga a no generar riesgo de \textbf{propiedad industrial} (marcas, signos distintivos, identidad comercial) frente a Google. Usar tipografías y colores \emph{oficiales} de Google en un sitio propio es precisamente el tipo de aproximación que puede generar confusión de origen. Retirarlos es cumplimiento preventivo de esta regla.
+\end{riesgobox}
+
+\section{Observación 1 --- Uso de marca: tipografía y colores}
+
+\subsection{Qué pidió exactamente el mensaje de WhatsApp}
+
+No adaptar ni modificar logotipos ni elementos visuales de Google \textbf{directamente}: colores, tipografías o variaciones del logo. Emplear línea gráfica limpia o \textbf{marca propia} de la iniciativa del embajador.
+
+Esto implica tres obligaciones acumulativas:
+
+\begin{enumerate}[leftmargin=*]
+  \item no usar el logotipo oficial de Google ni variaciones del monograma \enquote{G};
+  \item no usar tipografías asociadas a la familia institucional de Google (Product Sans / Google Sans) como identidad del sitio;
+  \item no usar ---ni aproximar de forma deliberada--- la \textbf{paleta hexadecimal oficial} de Google como sistema de color del sitio.
+\end{enumerate}
+
+\subsection{Tipografía: de Product Sans / Google Sans a Plus Jakarta Sans}
+
+\begin{table}[h]
+\centering
+\caption{Cambio tipográfico}
+\begin{tabular}{@{}p{3.8cm}p{5.5cm}p{5.2cm}@{}}
+\toprule
+\textbf{Aspecto} & \textbf{Antes (riesgo)} & \textbf{Después (adecuación)} \\
+\midrule
+Familia tipográfica & Google Sans / Product Sans (familia asociada a la identidad tipográfica de Google) & \textbf{Plus Jakarta Sans} (familia de código abierto, propia del sitio, sin vínculo institucional con Google) \\
+\addlinespace
+Ámbito de aplicación & Wordmark \emph{Guugul} e interfaz general & Todo el sitio, incluido el wordmark \emph{Guugul} \\
+\addlinespace
+Fundamento & Tipografía institucional de Google = elemento visual de la marca & Marca propia de la iniciativa, conforme al mensaje de WhatsApp \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{cumplbox}
+\noindent\textbf{Cumplimiento tipográfico.}\\[0.3em]
+Plus Jakarta Sans no es una variación, clon tipográfico ni tipografía \enquote{casi Product Sans}. Es una familia distinta, cargada localmente en el proyecto. Con ello se cumple de forma literal la instrucción de WhatsApp de no adaptar tipografías de Google y de preferir la marca propia del embajador.
+\end{cumplbox}
+
+\subsection{Colores: defensa detallada del cambio de paleta}
+
+Esta es la corrección más sensible y la que el mensaje de WhatsApp señala de forma expresa (\enquote{colores}). Por ello se documenta con códigos hexadecimales exactos.
+
+\subsubsection{Paleta oficial de Google (la que se dejó de usar)}
+
+Los códigos hexadecimales oficiales de la identidad cromática de Google ---los que el sitio empleaba antes, generando el riesgo de aparente adaptación de marca--- son:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{@{}llc@{}}
+\toprule
+\textbf{Color oficial Google} & \textbf{Hexadecimal} & \textbf{Muestra} \\
+\midrule
+Azul oficial & \texttt{\#4285F4} & \textcolor{GoogleBlue}{\rule{1.6cm}{0.55cm}} \\
+Rojo oficial & \texttt{\#DB4437} & \textcolor{GoogleRed}{\rule{1.6cm}{0.55cm}} \\
+Amarillo oficial & \texttt{\#F4B400} & \textcolor{GoogleYellow}{\rule{1.6cm}{0.55cm}} \\
+Verde oficial & \texttt{\#0F9D58} & \textcolor{GoogleGreen}{\rule{1.6cm}{0.55cm}} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{riesgobox}
+\noindent\textbf{Por qué esa paleta era problema.}\\[0.3em]
+Esos cuatro valores (\texttt{\#4285F4}, \texttt{\#DB4437}, \texttt{\#F4B400}, \texttt{\#0F9D58}) \textbf{son} los colores oficiales de Google. Usarlos como sistema de color de un sitio de embajador equivale a \emph{adaptar elementos visuales de Google directamente} ---exactamente lo que el mensaje de WhatsApp prohíbe--- y aumenta el riesgo de confusión de origen frente a la propiedad industrial (cláusula~4 del \emph{Término de Autorización}).
+\end{riesgobox}
+
+\subsubsection{Paleta propia actual de guugul.org (la que se usa ahora)}
+
+Se adoptó una paleta numéricamente distinta, definida en las variables CSS del sitio, manteniendo blanco de fondo:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{@{}llc@{}}
+\toprule
+\textbf{Color propio Guugul} & \textbf{Hexadecimal} & \textbf{Muestra} \\
+\midrule
+Azul propio & \texttt{\#2563EB} & \textcolor{OwnBlue}{\rule{1.6cm}{0.55cm}} \\
+Rojo propio & \texttt{\#FF3131} & \textcolor{OwnRed}{\rule{1.6cm}{0.55cm}} \\
+Amarillo propio & \texttt{\#FABD09} & \textcolor{OwnYellow}{\rule{1.6cm}{0.55cm}} \\
+Verde propio & \texttt{\#00AB4B} & \textcolor{OwnGreen}{\rule{1.6cm}{0.55cm}} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsubsection{Contraste hexadecimal: demostración de que ya no es la paleta oficial}
+
+\begin{table}[h]
+\centering
+\caption{Comparación hex a hex: paleta oficial Google vs.\ paleta propia Guugul}
+\begin{tabular}{@{}p{2.2cm}p{2.8cm}p{2.8cm}p{5.4cm}@{}}
+\toprule
+\textbf{Canal} & \textbf{Antes (Google)} & \textbf{Ahora (Guugul)} & \textbf{Por qué es distinto} \\
+\midrule
+Azul & \texttt{\#4285F4} & \texttt{\#2563EB} & Azul más profundo/saturado hacia índigo-azul de sistema UI; \textbf{no} es el azul de marca Google \\
+\addlinespace
+Rojo & \texttt{\#DB4437} & \texttt{\#FF3131} & Rojo más luminoso y puro; alejamiento deliberado del rojo institucional Google \\
+\addlinespace
+Amarillo & \texttt{\#F4B400} & \texttt{\#FABD09} & Amarillo/ámbar propio; valor distinto al amarillo oficial \\
+\addlinespace
+Verde & \texttt{\#0F9D58} & \texttt{\#00AB4B} & Verde más vivo; \textbf{no} coincide con el verde oficial Google \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{cumplbox}
+\noindent\textbf{Defensa de cumplimiento cromático (precisión).}\\[0.3em]
+\begin{enumerate}[leftmargin=*,nosep]
+  \item \textbf{Hecho previo:} el sitio utilizaba los hexadecimales oficiales de Google (\texttt{\#4285F4}, \texttt{\#DB4437}, \texttt{\#F4B400}, \texttt{\#0F9D58}).
+  \item \textbf{Hecho actual:} el sitio utiliza exclusivamente (\texttt{\#2563EB}, \texttt{\#FF3131}, \texttt{\#FABD09}, \texttt{\#00AB4B}).
+  \item \textbf{Ninguno} de los cuatro valores actuales es idéntico a un color oficial de Google.
+  \item El cambio no es cosmético: es el abandono completo del sistema cromático oficial y su sustitución por un sistema propio de la iniciativa del embajador, tal como pide el mensaje de WhatsApp (\enquote{marca propia} / \enquote{línea gráfica limpia}).
+  \item En términos de la cláusula~4 del \emph{Término de Autorización}, este alejamiento reduce el riesgo de reclamo por \textbf{propiedad industrial} por aparente uso de signos cromáticos asociados a la marca Google.
+  \item En términos de las \emph{Directrices 2026}, §1, la paleta propia es la expresión visual de la ausencia de vínculo de agencia con Google.
+\end{enumerate}
+\end{cumplbox}
+
+\subsubsection{Sobre la cuatricromía azul-rojo-amarillo-verde}
+
+Se reconoce que Guugul conserva una estructura de cuatro acentos (azul, rojo, amarillo, verde). Ello \textbf{no} equivale a usar la marca Google:
+
+\begin{itemize}[leftmargin=*]
+  \item lo prohibido por WhatsApp es adaptar los \textbf{elementos visuales de Google} (incluidos \emph{sus} colores oficiales), no el hecho abstracto de emplear cuatro colores en una interfaz;
+  \item la diferenciación se acredita con los hexadecimales: los valores oficiales fueron retirados y sustituidos por valores propios, distintos en cada canal;
+  \item tipografía, favicon y wordmark refuerzan esa distinción: ya no hay \enquote{look Google} tipográfico ni signo oficial.
+\end{itemize}
+
+\subsection{Favicon, wordmark y lema}
+
+\begin{table}[h]
+\centering
+\caption{Resto de ajustes de imagen institucional}
+\begin{tabular}{@{}p{3.2cm}p{5.4cm}p{5.2cm}@{}}
+\toprule
+\textbf{Elemento} & \textbf{Antes (riesgo)} & \textbf{Después (adecuación)} \\
+\midrule
+Favicon & Estética cercana a signos asociados a Google & Favicon propio (símbolo/estrella), sin logotipo oficial de Google ni de sus productos \\
+\addlinespace
+Wordmark & \emph{Guugul} en Product Sans + paleta oficial & Mismo nombre propio, en Plus Jakarta Sans + paleta propia \\
+\addlinespace
+Mensaje institucional & \enquote{Comunidad Oficial Estudiantil del Programa Google Ambassadors} & \enquote{Comunidad Oficial Estudiantil Impulsada por Estudiantes Embajadores Google} --- reconoce impulso estudiantil, sin presentarse como propiedad de Google \\
+\addlinespace
+Pie / domicilio & Incluía domicilio de Facultad de Ciencias, UNAM & Dirección retirada, para no sugerir sede institucional de Google ni de la UNAM como entidad del sitio \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Nota técnica: en el \emph{hero} se mantiene un efecto de esferas animadas con una paleta fija de demostración visual; \textbf{no} emplea logotipos de Google. El resto de la interfaz (barra de color, botones, tipografía, favicon y textos) opera ya con la identidad propia.
+
+\subsection{Argumento consolidado de cumplimiento --- Observación 1}
+
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Marca propia.} Nombre \emph{Guugul}, dominio \texttt{guugul.org}, Plus Jakarta Sans y paleta hexadecimal propia = línea gráfica de la iniciativa del embajador (pedido expreso de WhatsApp).
+  \item \textbf{No modificación de logotipos.} No se usa el logotipo de Google ni variaciones del monograma \enquote{G} oficial.
+  \item \textbf{No tipografía de Google.} Product Sans / Google Sans retiradas.
+  \item \textbf{No colores oficiales de Google.} Los hex \texttt{\#4285F4}/\texttt{\#DB4437}/\texttt{\#F4B400}/\texttt{\#0F9D58} fueron sustituidos por \texttt{\#2563EB}/\texttt{\#FF3131}/\texttt{\#FABD09}/\texttt{\#00AB4B}.
+  \item \textbf{Propiedad industrial (cláusula~4).} Separar tipografía y colores oficiales reduce el riesgo de confusión de origen que el embajador se obligó a no generar frente a Amplifica y Google.
+  \item \textbf{Ausencia de agencia (\emph{Directrices 2026}, §1).} La identidad visual propia es la expresión gráfica de esa independencia jurídica.
+\end{enumerate}
+
+\section{Observación 2 --- Descargo de responsabilidad}
+
+\subsection{Qué pidió el mensaje de WhatsApp}
+
+Incluir en el pie una nota de sitio no oficial, con el sentido del texto sugerido: sitio independiente desarrollado por embajadores, que no representa un canal oficial de Google.
+
+\subsection{Texto implementado}
+
+En el pie de página (componente \texttt{Footer}), visible en todas las rutas correspondientes:
+
+\begin{quote}
+\centering
+\textbf{Sitio independiente. No constituye un canal oficial de Google.}
+\end{quote}
+
+Se colocó inmediatamente encima del crédito de diseño. La redacción es breve y formal, pero conserva los dos elementos jurídicos esenciales del texto sugerido en WhatsApp: (1)~\emph{sitio independiente}; (2)~\emph{no canal oficial de Google}.
+
+\subsection{Argumento de cumplimiento --- Observación 2}
+
+\begin{enumerate}[leftmargin=*]
+  \item Cumple el pedido operativo del mensaje de WhatsApp (nota en pie, carácter no oficial).
+  \item Es coherente con las \emph{Directrices 2026}, apartado~1: sin vínculo de agencia ni representación con Google, afirmar que el sitio \textbf{no constituye un canal oficial} es la formulación correcta frente a terceros.
+  \item Distingue: (a)~contenidos originales del embajador licenciados a Amplifica/Google según el \emph{Término de Autorización}; y (b)~el sitio web propio, que no es plataforma de Amplifica ni de Google (cláusula~2: difusión en medios de Amplifica/Google \emph{cuando corresponda}, no en dominios de embajadores presentados como oficiales).
+  \item En textos legales internos se unificó el dominio a \texttt{guugul.org}, alineando la identificación pública del proyecto con el descargo.
+\end{enumerate}
+
+\regla{Lectura conjunta WhatsApp + Directrices §1 + Término cl. 2}{%
+El disclaimer no es una cortesía: es la declaración pública de que guugul.org \textbf{no} es canal oficial de Google, en línea con la ausencia de vínculo de agencia (\emph{Directrices 2026}, §1) y con el alcance limitado de los medios de difusión autorizados (cláusula~2 del \emph{Término de Autorización}).}
+
+\section{Otros ajustes de redacción institucional}
+
+Para alinear el mensaje público con la independencia del sitio y con el rol de Embajador:
+
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Hero y pie:} lema \emph{Comunidad Oficial Estudiantil Impulsada por Estudiantes Embajadores Google}.
+  \item \textbf{Hero:} se retiraron frases adicionales (\enquote{Hecho por estudiantes\ldots}, \enquote{Cerramos la brecha\ldots}) para una primera pantalla centrada en la marca propia.
+  \item \textbf{Crédito de diseño:} \enquote{Sitio web hecho y diseñado por} + logotipo Chiikö, al final absoluto del pie, debajo del disclaimer.
+\end{itemize}
+
+Estos cambios complementan ---no sustituyen--- el aviso legal y los términos de uso del sitio, en la superficie visible que solicitó la coordinación por WhatsApp.
+
+\section{Tabla resumen de cumplimiento}
+
+\begin{table}[h]
+\centering
+\caption{Matriz observación--acción--fundamento normativo}
+\begin{tabular}{@{}p{3.2cm}p{4.6cm}p{5.8cm}@{}}
+\toprule
+\textbf{Observación (WhatsApp)} & \textbf{Acción en guugul.org} & \textbf{Fundamento preciso} \\
+\midrule
+No adaptar marca Google (colores, tipografías, logos) & Plus Jakarta Sans; paleta propia distinta de la oficial; favicon y wordmark propios. Antes: \texttt{\#4285F4} \texttt{\#DB4437} \texttt{\#F4B400} \texttt{\#0F9D58}. Ahora: \texttt{\#2563EB} \texttt{\#FF3131} \texttt{\#FABD09} \texttt{\#00AB4B} & Mensaje WhatsApp; propiedad industrial (Término, cl.~4); ausencia de agencia (\emph{Directrices 2026}, §1) \\
+\addlinespace
+Disclaimer en pie & \enquote{Sitio independiente. No constituye un canal oficial de Google.} & Mensaje WhatsApp; \emph{Directrices 2026}, §1; Término, cl.~2 (medios de difusión) \\
+\addlinespace
+Valor a la comunidad & Se mantiene la biblioteca de \emph{prompts} y materiales propios & Finalidad del Programa (\emph{Directrices 2026}, §1--2); originalidad (§4) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Declaraciones de cumplimiento}
+
+Con base en lo anterior, se declara que:
+
+\begin{enumerate}[leftmargin=*]
+  \item El sitio \textbf{guugul.org} se presenta como iniciativa independiente impulsada por Estudiantes Embajadores Google, \textbf{sin} ostentar carácter de canal, producto o representación oficial de Google LLC, Alphabet Inc.\ o Amplifica Soluções Digitais LTDA.
+  \item La identidad visual vigente \textbf{no} reproduce ni adapta logotipos oficiales de Google.
+  \item La tipografía vigente es Plus Jakarta Sans; \textbf{no} se emplean Product Sans ni Google Sans como identidad del sitio.
+  \item La paleta vigente (\texttt{\#2563EB}, \texttt{\#FF3131}, \texttt{\#FABD09}, \texttt{\#00AB4B}) es propia del proyecto y \textbf{distinta} de la paleta oficial de Google (\texttt{\#4285F4}, \texttt{\#DB4437}, \texttt{\#F4B400}, \texttt{\#0F9D58}), que fue retirada.
+  \item El pie de página incluye descargo de responsabilidad de sitio no oficial, en el sentido solicitado por WhatsApp.
+  \item Los materiales formativos se entienden de autoría o curaduría del proyecto Guugul, conforme a originalidad (\emph{Directrices 2026}, §4) y titularidad (Término, cl.~4).
+  \item La licencia otorgada a Amplifica/Google sobre contenidos del Programa \textbf{no} implica que guugul.org sea un activo o canal oficial de dichas entidades.
+\end{enumerate}
+
+\section{Cierre y disponibilidad para revisión}
+
+Quedamos a disposición de la coordinación del Programa para revisar la versión corregida en producción (\url{https://www.guugul.org}) y, en su caso, ajustar la redacción del disclaimer o matices de identidad, siempre dentro de los límites de los documentos citados.
+
+Agradecemos el reconocimiento a la biblioteca de \emph{prompts} ---recibido en el mismo mensaje de WhatsApp--- y el acompañamiento para que el proyecto respete la imagen institucional de Google sin dejar de aportar valor a la comunidad estudiantil, objetivo central del Programa según las \emph{Directrices 2026}.
+
+\vspace{1.5em}
+\noindent
+Atentamente,\\[0.8em]
+\textbf{Equipo Guugul}\\
+Sitio: \url{https://www.guugul.org}\\
+Biblioteca de prompts: \url{https://www.guugul.org/aprender/prompts}\\
+Canal de las observaciones: WhatsApp (coordinación del Programa)
+
+\appendix
+\section{Referencias documentales}
+
+\begin{enumerate}[leftmargin=*]
+  \item Amplifica Soluções Digitais LTDA.\ / Programa Estudiantes Embajadores de Google 2026. \emph{Términos y Directrices de Participación del Programa de Estudiantes Embajadores de Google 2026}. Contacto referido: \texttt{contato@amplifica.me}.
+  \item Amplifica Soluções Digitais LTDA.\ \emph{Autorización y Cesión de Uso de Imagen, Voz, Nombre y Derechos de Autor} (instrumento individual del participante). Referencias a LFDA y LFPDPPP de los Estados Unidos Mexicanos; aviso de privacidad: \url{https://amplifica.me/politicaprivacidade}.
+  \item Mensaje de WhatsApp de la coordinación del Programa (observaciones de imagen institucional ---colores, tipografías, logos--- y disclaimer de sitio no oficial), en relación con \url{https://www.guugul.org/aprender/prompts}.
+  \item Paleta oficial de Google (códigos hexadecimales de referencia): azul \texttt{\#4285F4}, rojo \texttt{\#DB4437}, amarillo \texttt{\#F4B400}, verde \texttt{\#0F9D58}. Paleta propia vigente en guugul.org: \texttt{\#2563EB}, \texttt{\#FF3131}, \texttt{\#FABD09}, \texttt{\#00AB4B}.
+\end{enumerate}
+
+\end{document}

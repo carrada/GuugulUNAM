@@ -17,6 +17,14 @@ dist-ssr
 data/*.json
 .vercel
 
+# LaTeX build artifacts
+*.aux
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
