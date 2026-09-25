@@ -66,6 +66,12 @@ export function Footer() {
           />
         </a>
       </div>
+      <div className="border-t border-black/6 px-6 py-5">
+        <p className="mx-auto max-w-3xl text-center font-sans text-xs leading-relaxed text-slate-500">
+          Este es un sitio independiente desarrollado por embajadores del
+          programa y no representa un canal oficial de Google.
+        </p>
+      </div>
     </footer>
   )
 }
